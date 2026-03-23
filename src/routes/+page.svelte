@@ -31,7 +31,7 @@
       <img src={heroSrc} alt="" class="h-full w-full object-cover" />
     {/if}
   </div>
-  <div class="hero-overlay absolute inset-0 bg-black/60"></div>
+  <div class="hero-overlay absolute inset-0 bg-black/40"></div>
   <div class="hero-content relative z-10 text-center text-white">
     <div class="max-w-md">
       <h1 class="text-5xl font-bold">Auspatious</h1>
