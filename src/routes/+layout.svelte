@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { initializeAppState } from '$lib/state.svelte';
 	import DevMenu from '../components/DevMenu.svelte';
+	import Header from '../components/Header.svelte';
 
 	const app = initializeAppState();
 
@@ -15,5 +16,6 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<Header />
 {@render children()}
 <DevMenu />
