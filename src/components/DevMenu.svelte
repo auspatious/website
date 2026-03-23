@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { getAppState, heroImageNames } from '$lib/state.svelte';
+  import { getAppState, heroImageNames, heroVideos } from '$lib/state.svelte';
 
   const app = getAppState();
   const fonts = ['Inclusive Sans', 'Inter', 'Space Grotesk', 'serif', 'sans-serif'];
+  const heroTypes: ('image' | 'video')[] = ['image', 'video'];
   let open = $state(false);
 </script>
 
@@ -27,13 +28,32 @@
         </select>
       </label>
       <label class="mt-2 flex items-center gap-2">
-        <span class="label-text whitespace-nowrap">Hero Image</span>
-        <select class="select flex-1 select-sm" bind:value={app.heroImage}>
-          {#each heroImageNames as img}
-            <option value={img}>{img}</option>
+        <span class="label-text whitespace-nowrap">Hero Type</span>
+        <select class="select flex-1 select-sm" bind:value={app.heroType}>
+          {#each heroTypes as type}
+            <option value={type}>{type}</option>
           {/each}
         </select>
       </label>
+      {#if app.heroType === 'image'}
+        <label class="mt-2 flex items-center gap-2">
+          <span class="label-text whitespace-nowrap">Hero Image</span>
+          <select class="select flex-1 select-sm" bind:value={app.heroImage}>
+            {#each heroImageNames as img}
+              <option value={img}>{img}</option>
+            {/each}
+          </select>
+        </label>
+      {:else}
+        <label class="mt-2 flex items-center gap-2">
+          <span class="label-text whitespace-nowrap">Hero Video</span>
+          <select class="select flex-1 select-sm" bind:value={app.heroVideo}>
+            {#each heroVideos as vid}
+              <option value={vid}>{vid}</option>
+            {/each}
+          </select>
+        </label>
+      {/if}
     </div>
   {/if}
   <button class="btn btn-circle btn-sm" onclick={() => (open = !open)}>

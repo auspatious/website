@@ -3,7 +3,9 @@ import { getContext, setContext } from 'svelte';
 export type AppState = {
   serifFont: string;
   sansFont: string;
+  heroType: 'image' | 'video';
   heroImage: string;
+  heroVideo: string;
 };
 
 // Glob import of all hero images for dev menu switching (resolved at build time)
@@ -18,10 +20,14 @@ export const heroImageModules = Object.fromEntries(
 
 export const heroImageNames = Object.keys(heroImageModules);
 
+export const heroVideos = ['nasa.webm'];
+
 export const defaultAppState: AppState = {
   serifFont: 'Inter',
   sansFont: 'Inclusive Sans',
-  heroImage: 'ndvi-wofs-cairo.jpg'
+  heroType: 'video',
+  heroImage: 'ndvi-wofs-cairo.jpg',
+  heroVideo: 'nasa.webm'
 };
 
 export function initializeAppState(): AppState {
