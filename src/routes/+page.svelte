@@ -1,6 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import { getAppState, defaultAppState, heroImageModules } from '$lib/state.svelte';
+  import { people } from '$lib/people';
   import BlurUpImage from '../components/BlurUpImage.svelte';
   import heroLqip from '$lib/assets/images/ndvi-wofs-cairo.jpg?lqip';
 
@@ -54,3 +55,29 @@
     </div>
   </div>
 </div>
+
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <h2 class="mb-10 text-center text-3xl font-bold">Who We Are</h2>
+  <div class="flex flex-wrap justify-center gap-8">
+    {#each people as person}
+      <div class="card w-64 bg-base-200 shadow-lg">
+        <figure class="px-6 pt-6">
+          <div class="avatar">
+            <div class="w-24 rounded-full">
+              <enhanced:img src={person.image} alt={person.name} />
+            </div>
+          </div>
+        </figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">{person.name}</h3>
+          <p class="text-sm opacity-70">{person.title}</p>
+          <div class="card-actions mt-2">
+            <a href={person.linkedin} target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              View LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    {/each}
+  </div>
+</section>
