@@ -8,8 +8,7 @@
   const app = initializeAppState();
 
   $effect(() => {
-    document.documentElement.style.setProperty('--font-serif', app.serifFont);
-    document.documentElement.style.setProperty('--font-sans', app.sansFont);
+    document.documentElement.style.setProperty('--font-main', app.mainFont);
   });
 
   let { children } = $props();

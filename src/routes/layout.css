@@ -35,10 +35,9 @@
 }
 
 :root {
-  --font-sans: 'Space Grotesk', sans-serif;
-  --font-serif: 'Inclusive Sans Variable', serif;
+  --font-main: 'Inclusive Sans', sans-serif;
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
 }

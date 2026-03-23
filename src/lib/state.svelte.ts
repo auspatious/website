@@ -1,8 +1,7 @@
 import { getContext, setContext } from 'svelte';
 
 export type AppState = {
-  serifFont: string;
-  sansFont: string;
+  mainFont: string;
   heroType: 'image' | 'video';
   heroImage: string;
   heroVideo: string;
@@ -23,8 +22,7 @@ export const heroImageNames = Object.keys(heroImageModules);
 export const heroVideos = ['nasa.webm'];
 
 export const defaultAppState: AppState = {
-  serifFont: 'Inter',
-  sansFont: 'Inclusive Sans',
+  mainFont: 'Inclusive Sans',
   heroType: 'video',
   heroImage: 'ndvi-wofs-cairo.jpg',
   heroVideo: 'nasa.webm'

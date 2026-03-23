@@ -12,16 +12,8 @@
     <div class="mb-2 w-72 rounded-box bg-base-200 p-4 shadow-lg">
       <div class="mb-2 text-xs font-bold text-base-content/60 uppercase">Dev Menu</div>
       <label class="flex items-center gap-2">
-        <span class="label-text whitespace-nowrap">Serif Font</span>
-        <select class="select flex-1 select-sm" bind:value={app.serifFont}>
-          {#each fonts as font}
-            <option value={font}>{font}</option>
-          {/each}
-        </select>
-      </label>
-      <label class="mt-2 flex items-center gap-2">
-        <span class="label-text whitespace-nowrap">Sans Font</span>
-        <select class="select flex-1 select-sm" bind:value={app.sansSerifFont}>
+        <span class="label-text whitespace-nowrap">Main Font</span>
+        <select class="select flex-1 select-sm" bind:value={app.mainFont}>
           {#each fonts as font}
             <option value={font}>{font}</option>
           {/each}
