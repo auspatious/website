@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getAppState } from '$lib/state.svelte';
+  import { getAppState, heroImageNames } from '$lib/state.svelte';
 
   const app = getAppState();
   const fonts = ['Inclusive Sans', 'Inter', 'Space Grotesk', 'serif', 'sans-serif'];
@@ -23,6 +23,14 @@
         <select class="select flex-1 select-sm" bind:value={app.sansSerifFont}>
           {#each fonts as font}
             <option value={font}>{font}</option>
+          {/each}
+        </select>
+      </label>
+      <label class="mt-2 flex items-center gap-2">
+        <span class="label-text whitespace-nowrap">Hero Image</span>
+        <select class="select flex-1 select-sm" bind:value={app.heroImage}>
+          {#each heroImageNames as img}
+            <option value={img}>{img}</option>
           {/each}
         </select>
       </label>
