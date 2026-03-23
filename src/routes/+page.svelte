@@ -20,7 +20,7 @@
   and add a <video autoplay muted loop playsinline> branch here.
 -->
 
-<div class="hero relative min-h-screen overflow-hidden">
+<div class="hero relative min-h-dvh overflow-hidden">
   <BlurUpImage lqip={heroLqip.lqip} class="absolute inset-0">
     {#if isDefault}
       <enhanced:img

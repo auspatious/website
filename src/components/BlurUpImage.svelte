@@ -25,7 +25,7 @@
 </script>
 
 <div
-  class="relative overflow-hidden {className}"
+  class="relative h-full overflow-hidden {className}"
   style:background-image="url('{lqip}')"
   style:background-size="cover"
   style:background-position="center"
