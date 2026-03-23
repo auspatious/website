@@ -4,6 +4,7 @@
   import { initializeAppState } from '$lib/state.svelte';
   import DevMenu from '../components/DevMenu.svelte';
   import Header from '../components/Header.svelte';
+  import Footer from '../components/Footer.svelte';
 
   const app = initializeAppState();
 
@@ -17,4 +18,5 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <Header />
 {@render children()}
+<Footer />
 <DevMenu />
