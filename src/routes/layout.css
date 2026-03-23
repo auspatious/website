@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
-@plugin "daisyui" {
+@plugin 'daisyui' {
   themes: black --default;
 }
 
@@ -10,7 +10,8 @@
   font-style: normal;
   font-display: swap;
   font-weight: 300 700;
-  src: url(@fontsource-variable/inclusive-sans/files/inclusive-sans-latin-wght-normal.woff2) format('woff2');
+  src: url(@fontsource-variable/inclusive-sans/files/inclusive-sans-latin-wght-normal.woff2)
+    format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F;
 }
 
@@ -23,13 +24,13 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F;
 }
 
-
 @font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-display: swap;
   font-weight: 300 700;
-  src: url(@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2) format('woff2');
+  src: url(@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2)
+    format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F;
 }
 
