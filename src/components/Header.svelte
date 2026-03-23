@@ -3,9 +3,9 @@
   import Link from './Link.svelte';
 </script>
 
-<div class="navbar bg-transparent">
+<div class="navbar mx-auto max-w-5xl bg-transparent">
   <div class="navbar-start">
-    <Link href="/">
+    <Link href="/" class="p-1">
       <img src={logo} alt="Auspatious" class="h-10" />
     </Link>
   </div>
