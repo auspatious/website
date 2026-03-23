@@ -2,7 +2,7 @@
 	import { getAppState } from '$lib/state.svelte';
 
 	const app = getAppState();
-	const fonts = ['Inclusive Sans', 'Inter', 'serif', 'sans-serif'];
+	const fonts = ['Inclusive Sans', 'Inter', 'Space Grotesk', 'serif', 'sans-serif'];
 	let open = $state(false);
 </script>
 

@@ -43,6 +43,7 @@
 	},
 	"dependencies": {
 		"@fontsource-variable/inclusive-sans": "^5.2.8",
-		"@fontsource-variable/inter": "^5.2.8"
+		"@fontsource-variable/inter": "^5.2.8",
+		"@fontsource-variable/space-grotesk": "^5.2.10"
 	}
 }
