@@ -12,5 +12,8 @@
     </Link>
   </div>
   <div class="navbar-center"></div>
-  <div class="navbar-end"></div>
+  <div class="navbar-end gap-4">
+    <Link href="/" class="link link-hover">Home</Link>
+    <Link href="/contact" class="link link-hover">Contact Us</Link>
+  </div>
 </div>
