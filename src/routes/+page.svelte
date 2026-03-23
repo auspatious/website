@@ -30,7 +30,7 @@
       muted
       loop
       playsinline
-      class="absolute inset-0 h-full w-full object-cover"
+      class="absolute inset-0 h-full w-full object-cover object-[27%_center] sm:object-center"
       src={videoSrc}
     ></video>
   {:else}
