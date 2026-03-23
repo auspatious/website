@@ -2,6 +2,7 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { initializeAppState } from '$lib/state.svelte';
+	import DevMenu from '../components/DevMenu.svelte';
 
 	const app = initializeAppState();
 
@@ -15,3 +16,4 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 {@render children()}
+<DevMenu />
