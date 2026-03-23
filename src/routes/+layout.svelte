@@ -9,7 +9,7 @@
 
   $effect(() => {
     document.documentElement.style.setProperty('--font-serif', app.serifFont);
-    document.documentElement.style.setProperty('--font-sans', app.sansSerifFont);
+    document.documentElement.style.setProperty('--font-sans', app.sansFont);
   });
 
   let { children } = $props();

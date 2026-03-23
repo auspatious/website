@@ -2,7 +2,7 @@ import { getContext, setContext } from 'svelte';
 
 export type AppState = {
   serifFont: string;
-  sansSerifFont: string;
+  sansFont: string;
   heroImage: string;
 };
 
@@ -20,7 +20,7 @@ export const heroImageNames = Object.keys(heroImageModules);
 
 export const defaultAppState: AppState = {
   serifFont: 'Inter',
-  sansSerifFont: 'Inclusive Sans',
+  sansFont: 'Inclusive Sans',
   heroImage: 'ndvi-wofs-cairo.jpg'
 };
 
