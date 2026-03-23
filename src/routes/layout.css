@@ -1,2 +1,31 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@plugin "daisyui";
+
+/* Fonts */
+@font-face {
+  font-family: 'Inclusive Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(@fontsource-variable/inclusive-sans/files/inclusive-sans-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(@fontsource-variable/inter/files/inter-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F;
+}
+
+:root {
+  --font-sans: 'Inclusive Sans Variable', sans-serif;
+  --font-serif: 'Inclusive Sans Variable', serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
