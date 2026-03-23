@@ -48,7 +48,7 @@
   </div>
   <!-- Mobile menu panel -->
   <div
-    class="w-full border-t border-white transition-opacity duration-300 pt-2 mt-1 lg:hidden {menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}"
+    class="w-full border-t border-white/50 transition-opacity duration-300 pt-2 mt-1 lg:hidden {menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}"
   >
     <div class="flex w-full justify-center gap-6 text-sm">
       <Link href="/" class="link link-hover" onclick={() => (menuOpen = false)}>Home</Link>
