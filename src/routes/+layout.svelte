@@ -1,6 +1,6 @@
 <script lang="ts">
   import './layout.css';
-  import favicon from '$lib/assets/favicon.svg';
+  import favicon from '$lib/assets/logos/as-logo-symb-colour.svg';
   import { initializeAppState } from '$lib/state.svelte';
   import DevMenu from '../components/DevMenu.svelte';
   import Header from '../components/Header.svelte';
@@ -15,7 +15,10 @@
   let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+  <title>Auspatious: a cloud native geospatial company</title>
+  <link rel="icon" href={favicon} />
+</svelte:head>
 <Header />
 {@render children()}
 <Footer />
