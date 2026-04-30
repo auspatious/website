@@ -3,7 +3,7 @@
   import { getAppState, defaultAppState, heroImageModules } from '$lib/state.svelte';
   import { people } from '$lib/people';
   import BlurUpImage from '../components/BlurUpImage.svelte';
-  import heroLqip from '$lib/assets/images/ndvi-wofs-cairo.jpg?lqip';
+  import heroLqip from '$lib/assets/images/brisbane-smoke-sentinel2-2025.jpg?lqip';
 
   const app = getAppState();
 
@@ -38,7 +38,7 @@
     <BlurUpImage lqip={heroLqip.lqip} class="absolute inset-0">
       {#if isDefaultImage}
         <enhanced:img
-          src="$lib/assets/images/ndvi-wofs-cairo.jpg"
+          src="$lib/assets/images/brisbane-smoke-sentinel2-2025.jpg"
           alt=""
           class="h-full w-full object-cover"
         />

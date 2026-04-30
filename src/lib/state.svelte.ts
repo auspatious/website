@@ -23,8 +23,8 @@ export const heroVideos = ['nasa.webm'];
 
 export const defaultAppState: AppState = {
   mainFont: 'Inclusive Sans',
-  heroType: 'video',
-  heroImage: 'ndvi-wofs-cairo.jpg',
+  heroType: 'image',
+  heroImage: 'brisbane-smoke-sentinel2-2025.jpg',
   heroVideo: 'nasa.webm'
 };
 
