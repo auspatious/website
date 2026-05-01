@@ -4,6 +4,7 @@
   import { people } from '$lib/people';
   import BlurUpImage from '../components/BlurUpImage.svelte';
   import heroLqip from '$lib/assets/images/brisbane-smoke-sentinel2-2025.jpg?lqip';
+  import logoVertWhite from '$lib/assets/logos/as-logo-vert-white.svg';
 
   const app = getAppState();
 
@@ -49,10 +50,7 @@
   {/if}
   <div class="hero-overlay absolute inset-0 bg-black/40"></div>
   <div class="hero-content relative z-10 text-center text-white">
-    <div class="max-w-md">
-      <h1 class="text-5xl font-bold">Auspatious</h1>
-      <p class="py-6">Spatial data intelligence</p>
-    </div>
+    <img src={logoVertWhite} alt="Auspatious" />
   </div>
 </div>
 
