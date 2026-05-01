@@ -1,5 +1,5 @@
 import type { Picture } from 'vite-imagetools';
-import alex from '$lib/assets/images/alex.jpg?enhanced';
+import alex from '$lib/assets/images/alex-sq.jpg?enhanced';
 import will from '$lib/assets/images/will.jpg?enhanced';
 
 export type Person = {
