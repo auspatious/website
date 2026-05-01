@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state';
+  import { PUBLIC_SITE_URL } from '$env/static/public';
   import type { Component } from 'svelte';
   import type { ProjectMeta } from '$lib/projects';
   import BlurUpImage from '../../../components/BlurUpImage.svelte';
@@ -10,7 +11,28 @@
   );
   const bySlug = Object.fromEntries(Object.values(modules).map((m) => [m.meta.slug, m]));
   const project = $derived(bySlug[page.params.slug]);
+
+  const ogTitle = $derived(`${project.meta.title} — Auspatious`);
+  const ogUrl = $derived(`${PUBLIC_SITE_URL}${page.url.pathname}`);
+  const ogImage = $derived(`${PUBLIC_SITE_URL}${project.meta.image.img.src}`);
 </script>
+
+<svelte:head>
+  <title>{ogTitle}</title>
+  <meta name="description" content={project.meta.tagline} />
+  <link rel="canonical" href={ogUrl} />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={project.meta.tagline} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={ogUrl} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={project.meta.tagline} />
+  <meta name="twitter:image" content={ogImage} />
+</svelte:head>
 
 <div class="hero relative sm:min-h-[600px] h-[50vh] overflow-hidden">
   <BlurUpImage lqip={project.meta.lqip} class="absolute max-w-7xl w-full inset-0">
