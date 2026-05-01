@@ -22,7 +22,7 @@ export const heroImageNames = Object.keys(heroImageModules);
 export const heroVideos = ['nasa.webm'];
 
 export const defaultAppState: AppState = {
-  mainFont: 'Space Grotesk',
+  mainFont: 'Inclusive Sans',
   heroType: 'image',
   heroImage: 'brisbane-smoke-sentinel2-2025.jpg',
   heroVideo: 'nasa.webm'

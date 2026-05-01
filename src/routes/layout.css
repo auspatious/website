@@ -34,6 +34,10 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+2000-206F;
 }
 
+@theme {
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+}
+
 :root {
   --font-main: 'Inclusive Sans', sans-serif;
 }
