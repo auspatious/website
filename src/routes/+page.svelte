@@ -51,7 +51,7 @@
   <div class="hero-overlay absolute inset-0 bg-black/40"></div>
   <div class="hero-content relative z-10 flex flex-col items-center text-center text-white">
     <img src={logoVertWhite} alt="Auspatious" />
-    <p class="mt-6 max-w-2xl text-2xl" style:font-family="'Space Grotesk', sans-serif">
+    <p class="mt-6 max-w-2xl text-2xl">
       We are building a world where geospatial and Earth observation data and tools are easy to use,
       openly shared, and trusted, leading to increasing sustainability, inclusivity and equity.
     </p>
