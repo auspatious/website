@@ -3,7 +3,7 @@
   import { socials } from '$lib/socials';
 </script>
 
-<footer class="mx-auto flex max-w-5xl items-end justify-between p-10 text-white">
+<footer class="mx-auto flex max-w-5xl items-end justify-between p-10 pt-26 text-white">
   <p class="text-sm opacity-70">Auspatious &copy; 2026</p>
   <div class="flex flex-col items-center gap-3">
     <img src={logo} alt="Auspatious" class="h-40" />
