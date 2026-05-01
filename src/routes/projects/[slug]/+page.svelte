@@ -46,14 +46,14 @@
   <div class="hero-overlay absolute inset-0 bg-black/70 mix-blend-multiply"></div>
   <div class="hero-content relative z-10 mx-auto w-full max-w-3xl justify-start text-left text-white">
     <div>
-      <h1 class="sm:text-6xl font-bold">{project.meta.title}</h1>
-      <p class="mt-6 text-sm sm:text-xl font-bold tracking-[4px] uppercase">{project.meta.tagline}</p>
+      <h1 class="text-3xl sm:text-6xl font-bold">{project.meta.title}</h1>
+      <p class="mt-3 sm:mt-6 text-sm sm:text-xl font-bold tracking-[1px] sm:tracking-[4px] uppercase">{project.meta.tagline}</p>
     </div>
   </div>
 </div>
 
 <article
-  class="prose prose-a:text-ausblue mx-auto max-w-3xl px-6 py-16 [&_blockquote]:border-ausblue [&_blockquote]:not-italic [&_blockquote]:[quotes:none]"
+  class="prose prose-a:text-ausblue mx-auto max-w-3xl px-6 py-6 sm:py-16 [&_blockquote]:border-ausblue [&_blockquote]:not-italic [&_blockquote]:[quotes:none]"
 >
   <project.default />
 </article>
