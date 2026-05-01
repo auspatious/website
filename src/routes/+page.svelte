@@ -88,8 +88,8 @@
   </div>
 </section>
 
-<section class="mx-auto max-w-5xl px-6 py-16">
-  <h2 class="mb-10 text-center text-3xl font-bold">Who We Are</h2>
+<section class="mx-auto max-w-7xl px-6 py-16">
+  <h2 class="mb-10 font-space-grotesk text-3xl font-bold uppercase">Who We Are</h2>
   <div class="flex flex-wrap justify-center gap-8">
     {#each people as person}
       <div class="card w-64 bg-base-200 shadow-lg">
