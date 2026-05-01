@@ -4,4 +4,6 @@ import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
-export default defineConfig({ plugins: [lqip(), tailwindcss(), enhancedImages(), sveltekit()] });
+export default defineConfig({
+  plugins: [lqip(), tailwindcss(), enhancedImages(), sveltekit()]
+});
