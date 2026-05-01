@@ -1,5 +1,5 @@
 <script lang="ts">
-  import './layout.css';
+  import '../app.css';
   import favicon from '$lib/assets/logos/as-logo-symb-colour.svg';
   import { initializeAppState } from '$lib/state.svelte';
   import DevMenu from '../components/DevMenu.svelte';

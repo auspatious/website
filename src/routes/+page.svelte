@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import { getAppState, defaultAppState, heroImageModules } from '$lib/state.svelte';
   import { people } from '$lib/people';
+  import { projects } from '$lib/projects';
   import BlurUpImage from '../components/BlurUpImage.svelte';
   import heroLqip from '$lib/assets/images/brisbane-smoke-sentinel2-2025.jpg?lqip';
   import logoVertWhite from '$lib/assets/logos/as-logo-vert-white.svg';
@@ -57,6 +58,35 @@
     </p>
   </div>
 </div>
+
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <h2 class="mb-10 text-center text-3xl font-bold">Projects</h2>
+  <div class="flex flex-wrap justify-center gap-8">
+    {#each projects as project}
+      <a
+        href="{base}/projects/{project.slug}"
+        class="group relative h-64 w-80 overflow-hidden rounded-box shadow-lg transition hover:shadow-xl block rounded-xl"
+      >
+        <BlurUpImage lqip={project.lqip} class="absolute inset-0 overflow-hidden rounded-lg">
+          <enhanced:img
+            src={project.image}
+            alt={project.title}
+            sizes="320px"
+            class="h-full w-full object-cover"
+          />
+        </BlurUpImage>
+        <div class="absolute inset-0 bg-black/70 mix-blend-multiply rounded-lg overflow-hidden"></div>
+        <div class="absolute flex inset-0 z-10 flex-col justify-end p-6 text-white">
+          <h3 class="flex flex-grow text-4xl">{project.title}</h3>
+          <p class="text-sm">{project.tagline}</p>
+          <span class="mt-4 text-sm font-bold tracking-widest underline-offset-4 group-hover:underline">
+            View project →
+          </span>
+        </div>
+      </a>
+    {/each}
+  </div>
+</section>
 
 <section class="mx-auto max-w-5xl px-6 py-16">
   <h2 class="mb-10 text-center text-3xl font-bold">Who We Are</h2>

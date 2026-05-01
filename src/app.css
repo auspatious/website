@@ -36,6 +36,7 @@
 
 @theme {
   --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --color-ausblue: #194BFD;
 }
 
 :root {
