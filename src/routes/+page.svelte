@@ -26,7 +26,7 @@
   to the heroVideos array in src/lib/state.svelte.ts.
 -->
 
-<div class="hero relative min-h-svh overflow-hidden">
+<div class="hero relative h-[50vh] overflow-hidden sm:min-h-[600px]">
   {#if app.heroType === 'video'}
     <video
       autoplay
@@ -59,13 +59,13 @@
   </div>
 </div>
 
-<section class="mx-auto max-w-5xl px-6 py-16">
-  <h2 class="mb-10 text-center text-3xl font-bold">Projects</h2>
+<section class="mx-auto max-w-7xl px-6 py-16">
+  <h2 class="mb-10 font-space-grotesk text-3xl font-bold uppercase">Projects</h2>
   <div class="flex flex-wrap justify-center gap-8">
     {#each projects as project}
       <a
         href="{base}/projects/{project.slug}"
-        class="group relative h-64 w-80 overflow-hidden rounded-box shadow-lg transition hover:shadow-xl block rounded-xl"
+        class="group relative block h-64 w-80 overflow-hidden rounded-xl shadow-lg transition hover:shadow-xl"
       >
         <BlurUpImage lqip={project.lqip} class="absolute inset-0 overflow-hidden rounded-lg">
           <enhanced:img
@@ -75,9 +75,9 @@
             class="h-full w-full object-cover"
           />
         </BlurUpImage>
-        <div class="absolute inset-0 bg-black/70 mix-blend-multiply rounded-lg overflow-hidden"></div>
-        <div class="absolute flex inset-0 z-10 flex-col justify-end p-6 text-white">
-          <h3 class="flex flex-grow text-4xl">{project.title}</h3>
+        <div class="absolute inset-0 overflow-hidden rounded-lg bg-black/70 mix-blend-multiply"></div>
+        <div class="absolute inset-0 z-10 flex flex-col justify-end p-6 text-white">
+          <h3 class="flex flex-grow text-3xl">{project.title}</h3>
           <p class="text-sm">{project.tagline}</p>
           <span class="mt-4 text-sm font-bold tracking-widest underline-offset-4 group-hover:underline">
             View project →

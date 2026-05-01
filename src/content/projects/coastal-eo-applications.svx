@@ -1,0 +1,36 @@
+<script module lang="ts">
+  import type { ProjectMeta } from '$lib/projects';
+  import image from '$lib/assets/images/Indonesia Workshop 2025 1.jpg?enhanced';
+  import lqipData from '$lib/assets/images/Indonesia Workshop 2025 1.jpg?lqip';
+
+  export const meta: ProjectMeta = {
+    slug: 'coastal-eo-applications',
+    title: 'Coastal EO Applications',
+    tagline: 'Building capacity for coastal knowledge across Southeast Asia',
+    image,
+    lqip: lqipData.lqip
+  };
+</script>
+
+<script lang="ts">
+  import datacube from '$lib/assets/images/Old Datacube Thing 2018.JPG?enhanced';
+  import workshop2 from '$lib/assets/images/Indonesia Workshop 2025 2.jpg?enhanced';
+</script>
+
+> Through the Marine Resources Initiative, Auspatious is working alongside Geoscience Australia to deliver Earth observation expertise, practical training, and cloud-based data infrastructure to partner agencies across Southeast Asia. Our role includes data processing, hands-on training, and sustained mentoring, building real, lasting capabilities with teams across the region.
+
+We began our contribution by processing coastal and marine datasets for Vietnam and the Philippines, to support marine spatial planning and resource management. This groundwork informed a training workshop we led in the Philippines, introducing local teams to Earth observation science and satellite-derived coastal monitoring tools and techniques.
+
+<figure class="not-prose my-8">
+  <enhanced:img src={datacube} alt="Datacube" sizes="100vw" class="w-full" />
+  <figcaption class="mt-2 text-sm opacity-70">Open Data Cube</figcaption>
+</figure>
+
+Expanding to Indonesia, we're now working closely with the national Geospatial Information Agency, Badan Informasi Geospasial (BIG). In Bogor, we ran a Coastal Earth Observation Science workshop, introducing participants to satellite-based coastal monitoring using Digital Earth Australia products. A follow-on workshop in Sydney deepened the BIG team's skills in large-scale data processing using the cloud.
+
+<figure class="not-prose my-8">
+  <enhanced:img src={workshop2} alt="Indonesia Workshop" sizes="100vw" class="w-full" />
+  <figcaption class="mt-2 text-sm opacity-70">Indonesia Workshop, 2025</figcaption>
+</figure>
+
+This work provides Auspatious with an opportunity to share knowledge, but more importantly, to empower people to deliver their own analysis using a Digital Earth platform that they maintain and use. The team was previously limited in the scale of analyses they could run, and now have the capability to run national analysis.

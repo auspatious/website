@@ -1,0 +1,32 @@
+<script module lang="ts">
+  import type { ProjectMeta } from '$lib/projects';
+  import image from '$lib/assets/images/Flying into Auckland 2025.jpg?enhanced';
+  import lqipData from '$lib/assets/images/Flying into Auckland 2025.jpg?lqip';
+
+  export const meta: ProjectMeta = {
+    slug: 'land-degradation-neutrality',
+    title: 'Land Degradation Neutrality',
+    tagline: 'Delivering High-Resolution Land Cover Intelligence for Small Island Developing States',
+    image,
+    lqip: lqipData.lqip
+  };
+</script>
+
+<script lang="ts">
+  import landPro from '$lib/assets/images/Land Productivity Fancy Pic 2024.jpg?enhanced';
+</script>
+
+> Auspatious has partnered with Conservation International on a Global Environment Facility (GEF)-funded initiative to build a high-resolution, open, and reproducible land cover dataset for Small Island Developing States (SIDS), supporting global commitments on land degradation neutrality and SDG 15.3.1 reporting.
+
+To address this challenge, the project carefully evaluates where current datasets agree and disagree across diverse island geographies to inform a more fit-for-purpose classification approach.
+
+We're delivering a purpose-built, 30-metre resolution annual land use/land cover dataset spanning 2000 to 2024, aligned with UN Convention to Combat Desertification (UNCCD) requirements. The pipeline is built on open data and open science principles: Landsat imagery processed through cloud-free GeoMedian composites, machine learning classification methods benchmarked against available training data, and outputs published in cloud-native formats via Google Earth Engine, Zenodo, and Trends Earth. Every methodological choice is documented for full transparency and reproducibility, ensuring countries can understand, validate, and build upon the dataset.
+
+This project/work is critical because SIDS face a real monitoring gap. The default global land cover dataset used for UNCCD reporting, ESA's Climate Change Initiative product, operates at 300 metre resolution, which is too coarse to capture the fine-grained land dynamics of small island landscapes. Higher-resolution alternatives exist but suffer from incomplete geographic and temporal coverage, inconsistent classification methodologies, and significant discrepancies that can produce very different degradation outcomes depending on which product a country selects.
+
+<figure class="not-prose my-8">
+  <enhanced:img src={landPro} alt="Flying into Auckland" sizes="100vw" class="w-full" />
+  <figcaption class="mt-2 text-sm opacity-70">Flying into Auckland, 2025</figcaption>
+</figure>
+
+For SIDS, which are uniquely underserved and highly vulnerable to land degradation and climate change, inaccurate or incomplete monitoring data has real consequences for policy, investment, and international reporting.
