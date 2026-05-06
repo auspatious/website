@@ -43,12 +43,6 @@
   --font-main: 'Inclusive Sans', sans-serif;
 }
 
-@media (max-width: 767px) {
-  html {
-    scroll-snap-type: y proximity;
-  }
-}
-
 body {
   font-family: var(--font-main);
   background-color: #232323;

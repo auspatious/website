@@ -91,7 +91,7 @@
   <h2 class="mb-10 font-space-grotesk text-3xl font-bold uppercase">{text}</h2>
 {/snippet}
 
-<section class="mx-auto max-w-7xl px-6 my-16">
+<section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Mission')}
   <div class="ml-auto space-y-12 text-base md:w-[85%] md:text-xl">
     <div>
@@ -112,7 +112,7 @@
   </div>
 </section>
 
-<section class="mx-auto max-w-7xl px-6 my-16">
+<section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Our Approach')}
   <div class="ml-auto text-base md:w-[85%] md:text-xl">
     <ul class="space-y-6 [&>li]:border-l-2 [&>li]:border-ausblue [&>li]:py-1 [&>li]:pl-6">
@@ -259,7 +259,7 @@
   </div>
 </section>
 
-<section class="mx-auto max-w-7xl px-6 my-16">
+<section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Some of our Work')}
   <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-3/4 md:grid-cols-2">
     {#each projects as project}
@@ -288,7 +288,7 @@
   </div>
 </section>
 
-<section class="mx-auto max-w-7xl px-6 my-16">
+<section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Who We Are')}
   <div class="flex flex-wrap justify-center gap-8 md:justify-end">
     {#each people as person}
