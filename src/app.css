@@ -43,7 +43,34 @@
   --font-main: 'Inclusive Sans', sans-serif;
 }
 
+@media (max-width: 767px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+}
+
 body {
   font-family: var(--font-main);
   background-color: #232323;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

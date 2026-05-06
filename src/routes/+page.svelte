@@ -1,5 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths';
+  import { fly } from 'svelte/transition';
+  import { cubicOut } from 'svelte/easing';
   import { getAppState, defaultAppState, heroImageModules } from '$lib/state.svelte';
   import { people } from '$lib/people';
   import { projects } from '$lib/projects';
@@ -14,6 +16,23 @@
   const heroSrc = $derived(heroImageModules[app.heroImage] ?? '');
   const isDefaultImage = $derived(app.heroImage === defaultAppState.heroImage);
   const videoSrc = $derived(`${base}/${app.heroVideo}`);
+
+  function reveal(node: HTMLElement) {
+    node.classList.add('reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            node.classList.add('revealed');
+            observer.unobserve(node);
+          }
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(node);
+    return { destroy: () => observer.disconnect() };
+  }
 </script>
 
 <!--
@@ -53,8 +72,15 @@
   {/if}
   <div class="hero-overlay absolute inset-0 bg-black/40"></div>
   <div class="hero-content relative z-10 mt-10 flex flex-col items-center text-center text-white">
-    <img src={logoVertWhite} alt="Auspatious" />
-    <p class="mt-6 max-w-2xl sm:text-2xl font-space-grotesk">
+    <img
+      src={logoVertWhite}
+      alt="Auspatious"
+      in:fly={{ y: -20, duration: 1000, delay: 200, easing: cubicOut }}
+    />
+    <p
+      class="mt-6 max-w-2xl px-6 font-space-grotesk text-lg sm:text-2xl"
+      in:fly={{ y: -20, duration: 1000, delay: 700, easing: cubicOut }}
+    >
       We are building a world where geospatial and Earth observation data and tools are easy to use,
       openly shared, and trusted, leading to increasing sustainability, inclusivity and equity.
     </p>
@@ -67,20 +93,20 @@
 
 <section class="mx-auto max-w-7xl px-6 my-16">
   {@render heading('Mission')}
-  <div class="ml-auto space-y-12 text-xl md:w-[85%]">
+  <div class="ml-auto space-y-12 text-base md:w-[85%] md:text-xl">
     <div>
-      <p class="mb-16 text-3xl font-bold">
+      <p class="mb-8 text-xl font-bold md:mb-16 md:text-3xl" use:reveal>
         Auspatious designs and delivers cloud-native geospatial solutions that turn complex data into
         useful, usable products.
       </p>
-      <p class="mb-8">
+      <p class="mb-8" use:reveal>
         We work with governments, research organisations, and mission-driven partners to:
       </p>
-      <ul class="ml-12 list-disc space-y-2 [&>li]:pl-1">
-        <li>Build robust, open, and reproducible geospatial platforms</li>
-        <li>Lower barriers to accessing and analysing Earth observation data</li>
-        <li>Apply open standards, open data, and open-source software to problems</li>
-        <li>Share knowledge, grow capability, and strengthen the global EO community.</li>
+      <ul class="ml-6 list-disc space-y-2 [&>li]:pl-1 md:ml-12">
+        <li use:reveal>Build robust, open, and reproducible geospatial platforms</li>
+        <li use:reveal>Lower barriers to accessing and analysing Earth observation data</li>
+        <li use:reveal>Apply open standards, open data, and open-source software to problems</li>
+        <li use:reveal>Share knowledge, grow capability, and strengthen the global EO community.</li>
       </ul>
     </div>
   </div>
@@ -88,18 +114,18 @@
 
 <section class="mx-auto max-w-7xl px-6 my-16">
   {@render heading('Our Approach')}
-  <div class="ml-auto text-xl md:w-[85%]">
+  <div class="ml-auto text-base md:w-[85%] md:text-xl">
     <ul class="space-y-6 [&>li]:border-l-2 [&>li]:border-ausblue [&>li]:py-1 [&>li]:pl-6">
-      <li><strong>Open by default:</strong> open source, open data, open science</li>
-      <li><strong>Cloud-native:</strong> built for secure, scalable, operational use</li>
-      <li><strong>Thoughtful and collaborative:</strong> we question, learn, and co-design</li>
-      <li><strong>Impact-oriented:</strong> technology in service of community and the environment</li>
-      <li><strong>Anti-cynical:</strong> we believe that collaboration and trust is better for everyone</li>
+      <li use:reveal><strong>Open by default:</strong> open source, open data, open science</li>
+      <li use:reveal><strong>Cloud-native:</strong> built for secure, scalable, operational use</li>
+      <li use:reveal><strong>Thoughtful and collaborative:</strong> we question, learn, and co-design</li>
+      <li use:reveal><strong>Impact-oriented:</strong> technology in service of community and the environment</li>
+      <li use:reveal><strong>Anti-cynical:</strong> we believe that collaboration and trust is better for everyone</li>
     </ul>
   </div>
 </section>
 
-<section class="mx-auto grid min-h-[50svh] w-full max-w-7xl grid-cols-1 overflow-hidden rounded-t-[3rem] border-x-[16px] border-t-[16px] border-ausblue bg-[#232323] md:grid-cols-2">
+<section class="mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
   <div class="flex flex-col px-6 py-16 md:px-16">
     {@render heading('What We Do')}
     <div class="flex flex-1 items-center">
@@ -117,10 +143,10 @@
           <polyline points="16 18 22 12 16 6" />
           <polyline points="8 6 2 12 8 18" />
         </svg>
-        <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+        <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
           Software development
         </h3>
-        <p class="text-center text-xl">
+        <p class="text-center text-base md:text-xl">
           We build and maintain geospatial software that is simple, robust, and fit for purpose. Our
           focus is on good architecture, sensible abstractions, and long-term maintainability, not
           code for its own sake. Sometimes that means writing software; sometimes it means
@@ -130,7 +156,7 @@
       </div>
     </div>
   </div>
-  <div class="relative min-h-[50vh] md:min-h-0">
+  <div class="relative hidden min-h-[50vh] md:block md:min-h-0">
     <enhanced:img
       src={dataAtHome}
       alt=""
@@ -140,8 +166,8 @@
   </div>
 </section>
 
-<section class="-mt-[3rem] relative z-10 mx-auto grid min-h-[50svh] w-full max-w-7xl grid-cols-1 overflow-hidden rounded-t-[3rem] border-x-[16px] border-t-[16px] border-ausblue bg-[#D9D9D9] text-black md:grid-cols-2">
-  <div class="flex items-center bg-[#D9D9D9] px-6 py-16 md:px-16">
+<section class="-mt-[2rem] relative z-10 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+  <div class="flex min-h-svh snap-start items-center bg-[#D9D9D9] px-6 py-16 md:min-h-0 md:px-16">
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -159,17 +185,17 @@
         <path d="M13 16v2a2 2 0 0 0 2 2h2" />
         <circle cx="18" cy="20" r="1" />
       </svg>
-      <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
         Project design and delivery
       </h3>
-      <p class="text-center text-xl">
+      <p class="text-center text-base md:text-xl">
         We help shape and deliver complex geospatial projects from idea to implementation. Working
         closely with stakeholders and iterating early, we reduce risk, maintain momentum, and deliver
         systems that create lasting value.
       </p>
     </div>
   </div>
-  <div class="flex items-center bg-white px-6 py-16 md:px-16">
+  <div class="flex min-h-svh snap-start items-center bg-white px-6 py-16 md:min-h-0 md:px-16">
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -183,10 +209,10 @@
       >
         <path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 7 19h10.5Z" />
       </svg>
-      <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
         Cloud infrastructure
       </h3>
-      <p class="text-center text-xl">
+      <p class="text-center text-base md:text-xl">
         Auspatious designs secure, scalable infrastructure using modern cloud-native patterns and
         Infrastructure as Code. Security, reliability, and simplicity are built in from the start,
         ensuring systems are reproducible, understandable, and ready to scale.
@@ -195,8 +221,8 @@
   </div>
 </section>
 
-<section class="-mt-[3rem] relative z-20 mx-auto grid min-h-[50svh] w-full max-w-7xl grid-cols-1 overflow-hidden rounded-[3rem] border-[16px] border-ausblue bg-[#232323] md:grid-cols-2">
-  <div class="relative min-h-[50vh] md:min-h-0">
+<section class="-mt-[2rem] relative z-20 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
+  <div class="relative hidden min-h-[50vh] md:block md:min-h-0">
     <enhanced:img
       src={indonesiaWorkshop}
       alt=""
@@ -221,10 +247,10 @@
         <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
-      <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
         Cloud-native geospatial
       </h3>
-      <p class="text-center text-xl">
+      <p class="text-center text-base md:text-xl">
         Cloud-native geospatial is our core expertise. We design platforms and pipelines that make
         geospatial and Earth observation data scalable, accessible, and useful. We are trained and
         certified in information security practices.
@@ -264,7 +290,7 @@
 
 <section class="mx-auto max-w-7xl px-6 my-16">
   {@render heading('Who We Are')}
-  <div class="flex flex-wrap justify-end gap-8">
+  <div class="flex flex-wrap justify-center gap-8 md:justify-end">
     {#each people as person}
       <div class="flex h-64 w-64 flex-col justify-between rounded-xl bg-black p-6 text-white shadow-lg">
         <div class="h-24 w-24 overflow-hidden rounded-full">
