@@ -96,22 +96,21 @@
   {@render heading('Who We Are')}
   <div class="flex flex-wrap justify-end gap-8">
     {#each people as person}
-      <div class="card w-64 rounded-xl bg-black shadow-lg">
-        <figure class="px-6 pt-6">
-          <div class="avatar">
-            <div class="w-24 rounded-full">
-              <enhanced:img src={person.image} alt={person.name} />
-            </div>
-          </div>
-        </figure>
-        <div class="card-body items-center text-center">
-          <h3 class="card-title">{person.name}</h3>
+      <div class="flex h-64 w-64 flex-col justify-between rounded-xl bg-black p-6 text-white shadow-lg">
+        <div class="h-24 w-24 overflow-hidden rounded-full">
+          <enhanced:img src={person.image} alt={person.name} class="h-full w-full object-cover" />
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">{person.name}</h3>
           <p class="text-sm opacity-70">{person.title}</p>
-          <div class="card-actions mt-2">
-            <a href={person.linkedin} target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-              View LinkedIn
-            </a>
-          </div>
+          <a
+            href={person.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-sm btn-outline mt-3"
+          >
+            View LinkedIn
+          </a>
         </div>
       </div>
     {/each}
