@@ -6,6 +6,7 @@
   import BlurUpImage from '../components/BlurUpImage.svelte';
   import heroLqip from '$lib/assets/images/brisbane-smoke-sentinel2-2025.jpg?lqip';
   import logoVertWhite from '$lib/assets/logos/as-logo-vert-white.svg';
+  import dataAtHome from '$lib/assets/images/data-processing-at-home.jpg?enhanced';
 
   const app = getAppState();
 
@@ -94,6 +95,30 @@
       <li><strong>Impact-oriented:</strong> technology in service of community and the environment</li>
       <li><strong>Anti-cynical:</strong> we believe that collaboration and trust is better for everyone</li>
     </ul>
+  </div>
+</section>
+
+<section class="grid w-full grid-cols-1 max-w-7xl mx-auto overflow-hidden rounded-t-3xl border-x-[16px] border-t-[16px] border-ausblue md:grid-cols-2">
+  <div class="flex items-center px-6 py-16 md:px-16">
+    <div class="">
+      {@render heading('What We Do')}
+      <h3 class="mb-6 font-space-grotesk text-2xl font-bold uppercase text-center">Software development</h3>
+      <p class="text-xl text-center">
+        We build and maintain geospatial software that is simple, robust, and fit for purpose. Our
+        focus is on good architecture, sensible abstractions, and long-term maintainability, not code
+        for its own sake. Sometimes that means writing software; sometimes it means integrating
+        existing tools; and sometimes the best solution is writing no code at all. We love open source
+        software and contribute upstream whenever possible.
+      </p>
+    </div>
+  </div>
+  <div class="relative min-h-[50vh] md:min-h-0">
+    <enhanced:img
+      src={dataAtHome}
+      alt=""
+      sizes="(min-width: 768px) 50vw, 100vw"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
   </div>
 </section>
 
