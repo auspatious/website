@@ -59,8 +59,12 @@
   </div>
 </div>
 
+{#snippet heading(text: string)}
+  <h2 class="mb-10 font-space-grotesk text-3xl font-bold uppercase">{text}</h2>
+{/snippet}
+
 <section class="mx-auto max-w-7xl px-6 py-16">
-  <h2 class="mb-10 font-space-grotesk text-3xl font-bold uppercase">Projects</h2>
+  {@render heading('Projects')}
   <div class="ml-auto grid w-full grid-cols-2 gap-8 md:w-3/4">
     {#each projects as project}
       <a
@@ -89,7 +93,7 @@
 </section>
 
 <section class="mx-auto max-w-7xl px-6 py-16">
-  <h2 class="mb-10 font-space-grotesk text-3xl font-bold uppercase">Who We Are</h2>
+  {@render heading('Who We Are')}
   <div class="flex flex-wrap justify-center gap-8">
     {#each people as person}
       <div class="card w-64 bg-base-200 shadow-lg">
