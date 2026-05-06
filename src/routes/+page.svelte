@@ -104,6 +104,19 @@
     {@render heading('What We Do')}
     <div class="flex flex-1 items-center">
       <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="mx-auto mb-6 h-12 w-12"
+        >
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+        </svg>
         <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
           Software development
         </h3>
@@ -130,6 +143,22 @@
 <section class="-mt-[3rem] relative z-10 mx-auto grid min-h-[50svh] w-full max-w-7xl grid-cols-1 overflow-hidden rounded-t-[3rem] border-x-[16px] border-t-[16px] border-ausblue bg-[#D9D9D9] text-black md:grid-cols-2">
   <div class="flex items-center bg-[#D9D9D9] px-6 py-16 md:px-16">
     <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="mx-auto mb-6 h-12 w-12"
+      >
+        <path d="M2 19V5a2 2 0 0 1 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z" />
+        <circle cx="13" cy="14" r="2" />
+        <path d="M13 12v-2" />
+        <path d="M13 16v2a2 2 0 0 0 2 2h2" />
+        <circle cx="18" cy="20" r="1" />
+      </svg>
       <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
         Project design and delivery
       </h3>
@@ -142,6 +171,18 @@
   </div>
   <div class="flex items-center bg-white px-6 py-16 md:px-16">
     <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="mx-auto mb-6 h-12 w-12"
+      >
+        <path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 7 19h10.5Z" />
+      </svg>
       <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
         Cloud infrastructure
       </h3>
@@ -165,6 +206,21 @@
   </div>
   <div class="flex items-center px-6 py-16 md:px-16">
     <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="mx-auto mb-6 h-12 w-12"
+      >
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
       <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
         Cloud-native geospatial
       </h3>
