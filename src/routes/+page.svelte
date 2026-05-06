@@ -65,13 +65,13 @@
 
 <section class="mx-auto max-w-7xl px-6 py-16">
   {@render heading('Projects')}
-  <div class="ml-auto grid w-full grid-cols-2 gap-8 md:w-3/4">
+  <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-3/4 md:grid-cols-2">
     {#each projects as project}
       <a
         href="{base}/projects/{project.slug}"
-        class="group relative block aspect-video overflow-hidden rounded-xl shadow-lg transition hover:shadow-xl"
+        class="group relative block aspect-video overflow-hidden rounded-md shadow-lg transition hover:shadow-xl md:rounded-xl"
       >
-        <BlurUpImage lqip={project.lqip} class="absolute inset-0 overflow-hidden rounded-lg">
+        <BlurUpImage lqip={project.lqip} class="absolute inset-0 overflow-hidden rounded-md md:rounded-lg">
           <enhanced:img
             src={project.image}
             alt={project.title}
@@ -79,11 +79,11 @@
             class="h-full w-full object-cover"
           />
         </BlurUpImage>
-        <div class="absolute inset-0 overflow-hidden rounded-lg bg-black/70 mix-blend-multiply"></div>
-        <div class="absolute inset-0 z-10 flex flex-col justify-end p-6 text-white">
-          <h3 class="flex flex-grow text-3xl">{project.title}</h3>
-          <p class="text-base">{project.tagline}</p>
-          <span class="mt-4 text-sm font-bold tracking-widest underline-offset-4 group-hover:underline">
+        <div class="absolute inset-0 overflow-hidden rounded-md bg-black/70 mix-blend-multiply md:rounded-lg"></div>
+        <div class="absolute inset-0 z-10 flex flex-col justify-end p-4 text-white md:p-6">
+          <h3 class="flex flex-grow text-2xl md:text-3xl">{project.title}</h3>
+          <p class="text-sm md:text-base">{project.tagline}</p>
+          <span class="mt-2 text-xs font-bold tracking-widest underline-offset-4 group-hover:underline md:mt-4 md:text-sm">
             View project →
           </span>
         </div>
