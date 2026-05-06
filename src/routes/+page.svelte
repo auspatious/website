@@ -85,6 +85,19 @@
 </section>
 
 <section class="mx-auto max-w-7xl px-6 py-16">
+  {@render heading('Our Approach')}
+  <div class="ml-auto text-xl md:w-[85%]">
+    <ul class="space-y-6 [&>li]:border-l-2 [&>li]:border-ausblue [&>li]:py-1 [&>li]:pl-6">
+      <li><strong>Open by default:</strong> open source, open data, open science</li>
+      <li><strong>Cloud-native:</strong> built for secure, scalable, operational use</li>
+      <li><strong>Thoughtful and collaborative:</strong> we question, learn, and co-design</li>
+      <li><strong>Impact-oriented:</strong> technology in service of community and the environment</li>
+      <li><strong>Anti-cynical:</strong> we believe that collaboration and trust is better for everyone</li>
+    </ul>
+  </div>
+</section>
+
+<section class="mx-auto max-w-7xl px-6 py-16">
   {@render heading('Projects')}
   <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-3/4 md:grid-cols-2">
     {#each projects as project}
