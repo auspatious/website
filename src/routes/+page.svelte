@@ -7,6 +7,7 @@
   import heroLqip from '$lib/assets/images/brisbane-smoke-sentinel2-2025.jpg?lqip';
   import logoVertWhite from '$lib/assets/logos/as-logo-vert-white.svg';
   import dataAtHome from '$lib/assets/images/data-processing-at-home.jpg?enhanced';
+  import indonesiaWorkshop from '$lib/assets/images/indonesia-workshop.jpg?enhanced';
 
   const app = getAppState();
 
@@ -98,18 +99,22 @@
   </div>
 </section>
 
-<section class="grid w-full grid-cols-1 max-w-7xl mx-auto overflow-hidden rounded-t-3xl border-x-[16px] border-t-[16px] border-ausblue md:grid-cols-2">
-  <div class="flex items-center px-6 py-16 md:px-16">
-    <div class="">
-      {@render heading('What We Do')}
-      <h3 class="mb-6 font-space-grotesk text-2xl font-bold uppercase text-center">Software development</h3>
-      <p class="text-xl text-center">
-        We build and maintain geospatial software that is simple, robust, and fit for purpose. Our
-        focus is on good architecture, sensible abstractions, and long-term maintainability, not code
-        for its own sake. Sometimes that means writing software; sometimes it means integrating
-        existing tools; and sometimes the best solution is writing no code at all. We love open source
-        software and contribute upstream whenever possible.
-      </p>
+<section class="mx-auto grid min-h-[50svh] w-full max-w-7xl grid-cols-1 overflow-hidden rounded-t-[3rem] border-x-[16px] border-t-[16px] border-ausblue bg-[#232323] md:grid-cols-2">
+  <div class="flex flex-col px-6 py-16 md:px-16">
+    {@render heading('What We Do')}
+    <div class="flex flex-1 items-center">
+      <div>
+        <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+          Software development
+        </h3>
+        <p class="text-center text-xl">
+          We build and maintain geospatial software that is simple, robust, and fit for purpose. Our
+          focus is on good architecture, sensible abstractions, and long-term maintainability, not
+          code for its own sake. Sometimes that means writing software; sometimes it means
+          integrating existing tools; and sometimes the best solution is writing no code at all. We
+          love open source software and contribute upstream whenever possible.
+        </p>
+      </div>
     </div>
   </div>
   <div class="relative min-h-[50vh] md:min-h-0">
@@ -119,6 +124,56 @@
       sizes="(min-width: 768px) 50vw, 100vw"
       class="absolute inset-0 h-full w-full object-cover"
     />
+  </div>
+</section>
+
+<section class="-mt-[3rem] relative z-10 mx-auto grid min-h-[50svh] w-full max-w-7xl grid-cols-1 overflow-hidden rounded-t-[3rem] border-x-[16px] border-t-[16px] border-ausblue bg-[#D9D9D9] text-black md:grid-cols-2">
+  <div class="flex items-center bg-[#D9D9D9] px-6 py-16 md:px-16">
+    <div>
+      <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+        Project design and delivery
+      </h3>
+      <p class="text-center text-xl">
+        We help shape and deliver complex geospatial projects from idea to implementation. Working
+        closely with stakeholders and iterating early, we reduce risk, maintain momentum, and deliver
+        systems that create lasting value.
+      </p>
+    </div>
+  </div>
+  <div class="flex items-center bg-white px-6 py-16 md:px-16">
+    <div>
+      <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+        Cloud infrastructure
+      </h3>
+      <p class="text-center text-xl">
+        Auspatious designs secure, scalable infrastructure using modern cloud-native patterns and
+        Infrastructure as Code. Security, reliability, and simplicity are built in from the start,
+        ensuring systems are reproducible, understandable, and ready to scale.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="-mt-[3rem] relative z-20 mx-auto grid min-h-[50svh] w-full max-w-7xl grid-cols-1 overflow-hidden rounded-[3rem] border-[16px] border-ausblue bg-[#232323] md:grid-cols-2">
+  <div class="relative min-h-[50vh] md:min-h-0">
+    <enhanced:img
+      src={indonesiaWorkshop}
+      alt=""
+      sizes="(min-width: 768px) 50vw, 100vw"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+  </div>
+  <div class="flex items-center px-6 py-16 md:px-16">
+    <div>
+      <h3 class="mb-6 text-center font-space-grotesk text-2xl font-bold uppercase">
+        Cloud-native geospatial
+      </h3>
+      <p class="text-center text-xl">
+        Cloud-native geospatial is our core expertise. We design platforms and pipelines that make
+        geospatial and Earth observation data scalable, accessible, and useful. We are trained and
+        certified in information security practices.
+      </p>
+    </div>
   </div>
 </section>
 
