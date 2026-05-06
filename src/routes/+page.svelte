@@ -98,7 +98,7 @@
 </section>
 
 <section class="mx-auto max-w-7xl px-6 py-16">
-  {@render heading('Projects')}
+  {@render heading('Some of our Work')}
   <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-3/4 md:grid-cols-2">
     {#each projects as project}
       <a
