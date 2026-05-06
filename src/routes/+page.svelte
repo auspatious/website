@@ -64,6 +64,27 @@
 {/snippet}
 
 <section class="mx-auto max-w-7xl px-6 py-16">
+  {@render heading('Mission')}
+  <div class="ml-auto space-y-12 text-xl md:w-[85%]">
+    <div>
+      <p class="mb-16 text-3xl font-bold">
+        Auspatious designs and delivers cloud-native geospatial solutions that turn complex data into
+        useful, usable products.
+      </p>
+      <p class="mb-8">
+        We work with governments, research organisations, and mission-driven partners to:
+      </p>
+      <ul class="ml-12 list-disc space-y-2 [&>li]:pl-1">
+        <li>Build robust, open, and reproducible geospatial platforms</li>
+        <li>Lower barriers to accessing and analysing Earth observation data</li>
+        <li>Apply open standards, open data, and open-source software to problems</li>
+        <li>Share knowledge, grow capability, and strengthen the global EO community.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-7xl px-6 py-16">
   {@render heading('Projects')}
   <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-3/4 md:grid-cols-2">
     {#each projects as project}
