@@ -94,9 +94,9 @@
 
 <section class="mx-auto max-w-7xl px-6 py-16">
   {@render heading('Who We Are')}
-  <div class="flex flex-wrap justify-center gap-8">
+  <div class="flex flex-wrap justify-end gap-8">
     {#each people as person}
-      <div class="card w-64 bg-base-200 shadow-lg">
+      <div class="card w-64 rounded-xl bg-black shadow-lg">
         <figure class="px-6 pt-6">
           <div class="avatar">
             <div class="w-24 rounded-full">
