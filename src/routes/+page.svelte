@@ -26,7 +26,7 @@
   to the heroVideos array in src/lib/state.svelte.ts.
 -->
 
-<div class="hero relative h-[50vh] overflow-hidden sm:min-h-[600px]">
+<div class="hero relative min-h-svh overflow-hidden">
   {#if app.heroType === 'video'}
     <video
       autoplay
