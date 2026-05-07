@@ -34,8 +34,8 @@
   <meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
-<div class="hero relative sm:min-h-[600px] h-[50vh] overflow-hidden">
-  <BlurUpImage lqip={project.meta.lqip} class="absolute max-w-7xl w-full inset-0">
+<div class="hero relative h-svh overflow-hidden">
+  <BlurUpImage lqip={project.meta.lqip} class="absolute w-full inset-0">
     <enhanced:img
       src={project.meta.image}
       alt={project.meta.title}
