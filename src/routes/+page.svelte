@@ -23,22 +23,7 @@
     expandedPerson = expandedPerson === i ? null : i;
   }
 
-  function reveal(node: HTMLElement) {
-    node.classList.add('reveal');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            node.classList.add('revealed');
-            observer.unobserve(node);
-          }
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(node);
-    return { destroy: () => observer.disconnect() };
-  }
+  import { reveal } from '$lib/reveal';
 </script>
 
 <!--

@@ -5,6 +5,7 @@
   import type { Component } from 'svelte';
   import { projects, type ProjectMeta } from '$lib/projects';
   import BlurUpImage from '../../../components/BlurUpImage.svelte';
+  import { revealChildren } from '$lib/reveal';
 
   const modules = import.meta.glob<{ meta: ProjectMeta; default: Component }>(
     '/src/content/projects/*.svx',
@@ -64,7 +65,8 @@
 </div>
 
 <article
-  class="prose prose-a:text-ausblue mx-auto max-w-3xl px-6 py-6 sm:py-16 [&_blockquote]:border-ausblue [&_blockquote]:not-italic [&_blockquote]:[quotes:none] [&_img]:rounded-xl"
+  class="prose prose-a:text-auslink mx-auto max-w-3xl px-6 py-6 sm:py-16 [&_blockquote]:border-ausblue [&_blockquote]:not-italic [&_blockquote]:[quotes:none] [&_img]:rounded-xl"
+  use:revealChildren
 >
   <project.default />
 </article>
