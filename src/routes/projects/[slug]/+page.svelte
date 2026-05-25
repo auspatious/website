@@ -1,8 +1,9 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { page } from '$app/state';
   import { PUBLIC_SITE_URL } from '$env/static/public';
   import type { Component } from 'svelte';
-  import type { ProjectMeta } from '$lib/projects';
+  import { projects, type ProjectMeta } from '$lib/projects';
   import BlurUpImage from '../../../components/BlurUpImage.svelte';
 
   const modules = import.meta.glob<{ meta: ProjectMeta; default: Component }>(
@@ -15,6 +16,16 @@
   const ogTitle = $derived(`${project.meta.title} — Auspatious`);
   const ogUrl = $derived(`${PUBLIC_SITE_URL}${page.url.pathname}`);
   const ogImage = $derived(`${PUBLIC_SITE_URL}${project.meta.image.img.src}`);
+
+  const currentIndex = $derived(projects.findIndex((p) => p.slug === page.params.slug));
+  const prev = $derived(currentIndex > 0 ? projects[currentIndex - 1] : null);
+  const next = $derived(
+    currentIndex >= 0 && currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
+  );
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
 <svelte:head>
@@ -57,3 +68,30 @@
 >
   <project.default />
 </article>
+
+<nav class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-6 pb-16 text-sm text-auslink">
+  {#if prev}
+    <div class="flex flex-1 flex-col">
+      <span class="text-white opacity-60">← Previous</span>
+      <a href="{base}/projects/{prev.slug}" class="font-bold">{prev.title}</a>
+    </div>
+  {:else}
+    <span class="flex-1"></span>
+  {/if}
+
+  <button
+    onclick={scrollToTop}
+    class="flex-1 cursor-pointer text-center font-bold tracking-widest uppercase"
+  >
+    Back to top ↑
+  </button>
+
+  {#if next}
+    <div class="flex flex-1 flex-col text-right">
+      <span class="text-white opacity-60">Next →</span>
+      <a href="{base}/projects/{next.slug}" class="font-bold">{next.title}</a>
+    </div>
+  {:else}
+    <span class="flex-1"></span>
+  {/if}
+</nav>
