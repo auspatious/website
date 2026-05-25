@@ -94,7 +94,7 @@
 </div>
 
 {#snippet heading(text: string)}
-  <h2 class="mb-10 font-space-grotesk text-3xl font-bold uppercase">{text}</h2>
+  <h2 class="mb-10 font-space-grotesk text-3xl font-bold tracking-widest uppercase">{text}</h2>
 {/snippet}
 
 <section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
