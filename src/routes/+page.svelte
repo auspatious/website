@@ -17,6 +17,12 @@
   const isDefaultImage = $derived(app.heroImage === defaultAppState.heroImage);
   const videoSrc = $derived(`${base}/${app.heroVideo}`);
 
+  let expandedPerson = $state<number | null>(null);
+
+  function togglePerson(i: number) {
+    expandedPerson = expandedPerson === i ? null : i;
+  }
+
   function reveal(node: HTMLElement) {
     node.classList.add('reveal');
     const observer = new IntersectionObserver(
@@ -291,22 +297,45 @@
 <section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Who We Are')}
   <div class="flex flex-wrap justify-center gap-8 md:justify-end">
-    {#each people as person}
-      <div class="flex h-64 w-64 flex-col justify-between rounded-xl bg-black p-6 text-white shadow-lg">
-        <div class="h-24 w-24 overflow-hidden rounded-full">
-          <enhanced:img src={person.image} alt={person.name} class="h-full w-full object-cover" />
+    {#each people as person, i}
+      <div
+        class="flex w-64 cursor-pointer flex-col overflow-hidden rounded-xl bg-black shadow-lg transition-shadow duration-300 md:h-64 md:flex-row {expandedPerson === i
+          ? '!w-full md:flex-1'
+          : 'hover:scale-105'} hover:shadow-2xl"
+        onclick={() => togglePerson(i)}
+        onkeydown={(e) => e.key === 'Enter' && togglePerson(i)}
+        onfocusout={() => (expandedPerson = null)}
+        role="button"
+        tabindex="0"
+      >
+        <div class="flex h-64 w-full shrink-0 flex-col items-center justify-between p-6 text-center text-white md:w-64 md:items-start md:text-left">
+          <div class="h-24 w-24 overflow-hidden rounded-full">
+            <enhanced:img src={person.image} alt={person.name} class="h-full w-full object-cover" />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold">{person.name}</h3>
+            <p class="text-sm opacity-70">{person.title}</p>
+            <a
+              href={person.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-sm btn-outline mt-3"
+              onclick={(e: MouseEvent) => e.stopPropagation()}
+            >
+              View LinkedIn
+            </a>
+          </div>
         </div>
-        <div>
-          <h3 class="text-lg font-bold">{person.name}</h3>
-          <p class="text-sm opacity-70">{person.title}</p>
-          <a
-            href={person.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-sm btn-outline mt-3"
-          >
-            View LinkedIn
-          </a>
+        <div
+          class="overflow-hidden {expandedPerson === i
+            ? 'flex-1'
+            : 'hidden'}"
+        >
+          <div class="max-h-64 overflow-y-auto border-t border-white/10 px-5 py-6 text-base text-white md:h-full md:max-h-none md:min-w-64 md:border-t-0 md:border-l">
+            {#each person.bio as paragraph}
+              <p class="mb-3">{paragraph}</p>
+            {/each}
+          </div>
         </div>
       </div>
     {/each}
