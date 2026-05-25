@@ -285,7 +285,7 @@
         <div class="absolute inset-0 z-10 flex flex-col justify-end p-4 text-white md:p-6">
           <h3 class="flex flex-grow text-2xl md:text-3xl">{project.title}</h3>
           <p class="text-sm md:text-base">{project.tagline}</p>
-          <span class="mt-2 text-xs font-bold tracking-widest text-ausblue underline-offset-4 group-hover:underline md:mt-4 md:text-sm">
+          <span class="mt-2 text-xs font-bold tracking-widest text-auslink underline-offset-4 group-hover:underline md:mt-4 md:text-sm">
             View project →
           </span>
         </div>
