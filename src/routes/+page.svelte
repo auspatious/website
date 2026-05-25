@@ -271,7 +271,7 @@
     {#each projects as project}
       <a
         href="{base}/projects/{project.slug}"
-        class="group relative block aspect-video overflow-hidden rounded-md shadow-lg transition hover:shadow-xl md:rounded-xl"
+        class="group relative block aspect-video overflow-hidden rounded-md shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl md:rounded-xl"
       >
         <BlurUpImage lqip={project.lqip} class="absolute inset-0 overflow-hidden rounded-md md:rounded-lg">
           <enhanced:img
