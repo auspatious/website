@@ -64,7 +64,7 @@
 </div>
 
 <article
-  class="prose prose-a:text-ausblue mx-auto max-w-3xl px-6 py-6 sm:py-16 [&_blockquote]:border-ausblue [&_blockquote]:not-italic [&_blockquote]:[quotes:none]"
+  class="prose prose-a:text-ausblue mx-auto max-w-3xl px-6 py-6 sm:py-16 [&_blockquote]:border-ausblue [&_blockquote]:not-italic [&_blockquote]:[quotes:none] [&_img]:rounded-xl"
 >
   <project.default />
 </article>
