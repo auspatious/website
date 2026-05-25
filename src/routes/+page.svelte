@@ -131,7 +131,7 @@
   </div>
 </section>
 
-<section class="mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+<section class="mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
   <div class="flex flex-col px-6 py-16 md:px-16">
     {@render heading('What We Do')}
     <div class="flex flex-1 items-center">
@@ -172,7 +172,7 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-10 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+<section class="-mt-[2rem] relative z-10 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
   <div class="flex min-h-svh snap-start items-center bg-[#D9D9D9] px-6 py-16 md:min-h-0 md:px-16">
     <div>
       <svg
@@ -227,7 +227,7 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-20 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
+<section class="-mt-[2rem] relative z-20 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
   <div class="relative hidden min-h-[50vh] md:block md:min-h-0">
     <enhanced:img
       src={indonesiaWorkshop}
