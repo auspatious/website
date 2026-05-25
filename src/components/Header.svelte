@@ -18,7 +18,7 @@
 
 <div
   class="fixed top-0 right-0 left-0 z-50 transition-colors duration-300 {scrolled || menuOpen
-    ? 'bg-black'
+    ? 'bg-[#232323]'
     : 'bg-transparent'}"
 >
   <div class="navbar mx-auto max-w-5xl flex-wrap">
