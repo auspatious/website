@@ -84,7 +84,7 @@
 
 <section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Mission')}
-  <div class="ml-auto space-y-12 text-base md:w-[85%] md:text-xl">
+  <div class="ml-auto space-y-12 text-base md:w-5/6 md:text-xl">
     <div>
       <p class="mb-8 text-xl font-bold md:mb-16 md:text-3xl" use:reveal>
         Auspatious designs and delivers cloud-native geospatial solutions that turn complex data into
@@ -105,7 +105,7 @@
 
 <section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Our Approach')}
-  <div class="ml-auto text-base md:w-[85%] md:text-xl">
+  <div class="ml-auto text-base md:w-5/6 md:text-xl">
     <ul class="space-y-6 [&>li]:border-l-2 [&>li]:border-ausblue [&>li]:py-1 [&>li]:pl-6">
       <li use:reveal><strong>Open by default:</strong> open source, open data, open science</li>
       <li use:reveal><strong>Cloud-native:</strong> built for secure, scalable, operational use</li>
@@ -252,7 +252,7 @@
 
 <section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Some of our Work')}
-  <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-3/4 md:grid-cols-2">
+  <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-5/6 md:grid-cols-2">
     {#each projects as project}
       <a
         href="{base}/projects/{project.slug}"
