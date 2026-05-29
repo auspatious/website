@@ -116,8 +116,8 @@
   </div>
 </section>
 
-<section class="mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
-  <div class="flex flex-col px-6 py-16 md:px-16">
+<section class="mx-auto grid w-full max-w-7xl md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+  <div class="flex flex-col px-6 py-20 md:px-16">
     {@render heading('What We Do')}
     <div class="flex flex-1 items-center">
       <div>
@@ -147,7 +147,7 @@
       </div>
     </div>
   </div>
-  <div class="relative hidden min-h-[50vh] md:block md:min-h-0">
+  <div class="relative hidden md:block">
     <enhanced:img
       src={dataAtHome}
       alt=""
@@ -157,8 +157,8 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-10 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
-  <div class="flex min-h-svh snap-start items-center bg-[#D9D9D9] px-6 py-16 md:min-h-0 md:px-16">
+<section class="-mt-[2rem] relative z-10 mx-auto grid w-full max-w-7xl md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+  <div class="flex items-center bg-[#D9D9D9] px-6 py-20 md:px-16">
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +186,7 @@
       </p>
     </div>
   </div>
-  <div class="flex min-h-svh snap-start items-center bg-white px-6 py-16 md:min-h-0 md:px-16">
+  <div class="flex items-center bg-white px-6 py-20 md:px-16">
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -212,8 +212,8 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-20 mx-auto grid min-h-svh w-full max-w-7xl snap-start md:min-h-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
-  <div class="relative hidden min-h-[50vh] md:block md:min-h-0">
+<section class="-mt-[2rem] relative z-20 mx-auto grid w-full max-w-7xl md:h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
+  <div class="relative hidden md:block">
     <enhanced:img
       src={indonesiaWorkshop}
       alt=""
@@ -221,7 +221,7 @@
       class="absolute inset-0 h-full w-full object-cover"
     />
   </div>
-  <div class="flex items-center px-6 py-16 md:px-16">
+  <div class="flex items-center px-6 py-20 md:px-16">
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
