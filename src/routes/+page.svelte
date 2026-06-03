@@ -116,8 +116,8 @@
   </div>
 </section>
 
-<section class="mx-auto grid w-full max-w-7xl md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
-  <div class="flex flex-col px-6 py-20 md:px-16">
+<section class="mx-auto mt-12 grid w-full max-w-7xl md:mt-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+  <div class="flex flex-col px-6 pt-10 pb-20 md:px-16 md:pt-12">
     {@render heading('What We Do')}
     <div class="flex flex-1 items-center">
       <div>
