@@ -15,7 +15,7 @@ export const people: Person[] = [
     name: 'Alex Leith',
     title: 'Founder',
     image: alex,
-    linkedin: 'https://linkedin.com/in/alexleith',
+    linkedin: 'https://linkedin.com/in/alex-leith',
     bio: [
       'Alex is an open geospatial technologist with deep expertise in software development, cloud infrastructure, and program governance, all focused on making Earth observation data more accessible, actionable, and aligned with sustainable development.',
       'Outside of running Auspatious, he volunteers his purpose, principles, and time on the Spatio-Temporal Asset Catalog Project Steering Council, as a Non-Executive Board Director at OSGeo Oceania and oversees financial stewardship as Treasurer at Earth Observation Australia.',
