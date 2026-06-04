@@ -294,16 +294,16 @@
   <div class="flex flex-wrap justify-center gap-8 md:justify-end">
     {#each people as person, i}
       <div
-        class="flex w-64 cursor-pointer flex-col overflow-hidden rounded-xl bg-black shadow-lg transition-shadow duration-300 md:h-64 md:flex-row {expandedPerson === i
-          ? '!w-full md:flex-1'
-          : 'hover:scale-105'} hover:shadow-2xl"
+        class="flex w-64 cursor-pointer flex-col overflow-hidden rounded-xl bg-black shadow-lg transition-shadow duration-300 md:flex-row {expandedPerson === i
+          ? '!w-full md:min-h-64 md:flex-1'
+          : 'md:h-64 hover:scale-105'} hover:shadow-2xl"
         onclick={() => togglePerson(i)}
         onkeydown={(e) => e.key === 'Enter' && togglePerson(i)}
         role="button"
         tabindex="0"
         use:closeOnOutside
       >
-        <div class="flex h-64 w-full shrink-0 flex-col items-center justify-between p-6 text-center text-white md:w-64 md:items-start md:text-left">
+        <div class="flex h-64 w-full shrink-0 flex-col items-center justify-between p-6 text-center text-white md:h-auto md:min-h-64 md:w-64 md:items-start md:text-left">
           <div class="h-24 w-24 overflow-hidden rounded-full">
             <enhanced:img src={person.image} alt={person.name} class="h-full w-full object-cover" />
           </div>
@@ -326,7 +326,7 @@
             ? 'flex-1'
             : 'hidden'}"
         >
-          <div class="max-h-64 overflow-y-auto border-t border-white/10 px-5 py-6 text-base text-white md:h-full md:max-h-none md:min-w-64 md:border-t-0 md:border-l">
+          <div class="border-t border-white/10 px-5 py-6 text-base text-white md:min-w-64 md:border-t-0 md:border-l">
             {#each person.bio as paragraph}
               <p class="mb-3">{paragraph}</p>
             {/each}
