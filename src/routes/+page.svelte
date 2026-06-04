@@ -23,6 +23,16 @@
     expandedPerson = expandedPerson === i ? null : i;
   }
 
+  function closeOnOutside(node: HTMLElement) {
+    const onClick = (e: MouseEvent) => {
+      if (expandedPerson !== null && !node.contains(e.target as Node)) {
+        expandedPerson = null;
+      }
+    };
+    document.addEventListener('click', onClick, true);
+    return { destroy: () => document.removeEventListener('click', onClick, true) };
+  }
+
   import { reveal } from '$lib/reveal';
 </script>
 
@@ -116,7 +126,7 @@
   </div>
 </section>
 
-<section class="mx-auto mt-12 grid w-full max-w-7xl md:mt-0 md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+<section class="mx-auto mt-12 grid w-full max-w-7xl md:mt-0 md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
   <div class="flex flex-col px-6 pt-10 pb-20 md:px-16 md:pt-12">
     {@render heading('What We Do')}
     <div class="flex flex-1 items-center">
@@ -134,7 +144,7 @@
           <polyline points="16 18 22 12 16 6" />
           <polyline points="8 6 2 12 8 18" />
         </svg>
-        <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
+        <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase lg:text-2xl">
           Software development
         </h3>
         <p class="text-center text-base md:text-xl">
@@ -157,7 +167,7 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-10 mx-auto grid w-full max-w-7xl md:h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+<section class="-mt-[2rem] relative z-10 mx-auto grid w-full max-w-7xl md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
   <div class="flex items-center bg-[#D9D9D9] px-6 py-20 md:px-16">
     <div>
       <svg
@@ -176,7 +186,7 @@
         <path d="M13 16v2a2 2 0 0 0 2 2h2" />
         <circle cx="18" cy="20" r="1" />
       </svg>
-      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
+      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase lg:text-2xl">
         Project design and delivery
       </h3>
       <p class="text-center text-base md:text-xl">
@@ -200,7 +210,7 @@
       >
         <path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 7 19h10.5Z" />
       </svg>
-      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
+      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase lg:text-2xl">
         Cloud infrastructure
       </h3>
       <p class="text-center text-base md:text-xl">
@@ -212,7 +222,7 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-20 mx-auto grid w-full max-w-7xl md:h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
+<section class="-mt-[2rem] relative z-20 mx-auto grid w-full max-w-7xl md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
   <div class="relative hidden md:block">
     <enhanced:img
       src={indonesiaWorkshop}
@@ -238,7 +248,7 @@
         <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
-      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase md:text-2xl">
+      <h3 class="mb-6 text-center font-space-grotesk text-xl font-bold uppercase lg:text-2xl">
         Cloud-native geospatial
       </h3>
       <p class="text-center text-base md:text-xl">
@@ -289,9 +299,9 @@
           : 'hover:scale-105'} hover:shadow-2xl"
         onclick={() => togglePerson(i)}
         onkeydown={(e) => e.key === 'Enter' && togglePerson(i)}
-        onfocusout={() => (expandedPerson = null)}
         role="button"
         tabindex="0"
+        use:closeOnOutside
       >
         <div class="flex h-64 w-full shrink-0 flex-col items-center justify-between p-6 text-center text-white md:w-64 md:items-start md:text-left">
           <div class="h-24 w-24 overflow-hidden rounded-full">

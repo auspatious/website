@@ -2,9 +2,11 @@
   import logo from '$lib/assets/logos/as-logo-symb-colour.svg';
   import logoText from '$lib/assets/logos/as-logo-white-text.svg';
   import Link from './Link.svelte';
+  import ContactModal from './ContactModal.svelte';
 
   let menuOpen = $state(false);
   let scrolled = $state(false);
+  let contactOpen = $state(false);
 
   $effect(() => {
     const onScroll = () => {
@@ -33,7 +35,9 @@
       <!-- Desktop links -->
       <div class="hidden gap-4 p-1 lg:flex">
         <Link href="/" class="link link-hover">Home</Link>
-        <Link href="/ " class="link link-hover">Contact Us</Link>
+        <button class="link link-hover cursor-pointer" onclick={() => (contactOpen = true)}>
+          Contact Us
+        </button>
       </div>
       <!-- Mobile hamburger -->
       <button
@@ -67,8 +71,18 @@
     >
       <div class="flex w-full justify-center gap-6 text-sm">
         <Link href="/" class="link link-hover" onclick={() => (menuOpen = false)}>Home</Link>
-        <Link href="/" class="link link-hover" onclick={() => (menuOpen = false)}>Contact Us</Link>
+        <button
+          class="link link-hover cursor-pointer"
+          onclick={() => {
+            menuOpen = false;
+            contactOpen = true;
+          }}
+        >
+          Contact Us
+        </button>
       </div>
     </div>
   </div>
 </div>
+
+<ContactModal bind:open={contactOpen} />
