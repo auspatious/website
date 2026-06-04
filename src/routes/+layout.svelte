@@ -4,7 +4,6 @@
   import { env } from '$env/dynamic/public';
   import favicon from '$lib/assets/logos/as-logo-symb-colour.svg';
   import { initializeAppState } from '$lib/state.svelte.ts';
-  import DevMenu from '../components/DevMenu.svelte';
   import Header from '../components/Header.svelte';
   import Footer from '../components/Footer.svelte';
 
@@ -42,4 +41,3 @@
 <Header />
 {@render children()}
 <Footer />
-<DevMenu />
