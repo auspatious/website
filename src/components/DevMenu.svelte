@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getAppState, heroImageNames, heroVideos } from '$lib/state.svelte';
+  import { getAppState, heroImageNames, heroVideos } from '$lib/state.svelte.ts';
 
   const app = getAppState();
   const fonts = ['Inclusive Sans', 'Inter', 'Space Grotesk', 'serif', 'sans-serif'];
