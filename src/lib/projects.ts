@@ -1,4 +1,4 @@
-import type { Picture } from 'vite-imagetools';
+import type { Picture } from '@sveltejs/enhanced-img';
 
 export type ProjectMeta = {
   slug: string;

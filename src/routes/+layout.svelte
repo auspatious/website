@@ -3,7 +3,7 @@
   import { page } from '$app/state';
   import { env } from '$env/dynamic/public';
   import favicon from '$lib/assets/logos/as-logo-symb-colour.svg';
-  import { initializeAppState } from '$lib/state.svelte.ts';
+  import { initializeAppState } from '$lib/state.svelte';
   import Header from '../components/Header.svelte';
   import Footer from '../components/Footer.svelte';
 

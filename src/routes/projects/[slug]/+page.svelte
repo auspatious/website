@@ -12,7 +12,7 @@
     { eager: true }
   );
   const bySlug = Object.fromEntries(Object.values(modules).map((m) => [m.meta.slug, m]));
-  const project = $derived(bySlug[page.params.slug]);
+  const project = $derived(bySlug[page.params.slug!]);
 
   const ogTitle = $derived(`${project.meta.title} — Auspatious`);
   const canonicalBaseUrl = $derived((env.PUBLIC_SITE_URL || page.url.origin).replace(/\/$/, ''));

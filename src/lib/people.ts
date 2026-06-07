@@ -1,4 +1,4 @@
-import type { Picture } from 'vite-imagetools';
+import type { Picture } from '@sveltejs/enhanced-img';
 import alex from '$lib/assets/images/alex-sq.jpg?enhanced';
 import will from '$lib/assets/images/will.jpg?enhanced';
 

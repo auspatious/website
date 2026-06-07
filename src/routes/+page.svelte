@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
-  import { getAppState, defaultAppState, heroImageModules } from '$lib/state.svelte.ts';
+  import { getAppState, defaultAppState, heroImageModules } from '$lib/state.svelte';
   import { people } from '$lib/people';
   import { projects } from '$lib/projects';
   import BlurUpImage from '../components/BlurUpImage.svelte';
