@@ -10,6 +10,7 @@
   import logoVertWhite from '$lib/assets/logos/as-logo-vert-white.svg';
   import dataAtHome from '$lib/assets/images/data-processing-at-home.jpg?enhanced';
   import indonesiaWorkshop from '$lib/assets/images/indonesia-workshop.jpg?enhanced';
+  import givingBack from '$lib/assets/images/giving-back.jpg?enhanced';
 
   const app = getAppState();
 
@@ -286,6 +287,98 @@
         </div>
       </a>
     {/each}
+  </div>
+</section>
+
+<section class="mx-auto w-full max-w-7xl overflow-hidden rounded-[2rem] border-[8px] border-white bg-[#232323] md:rounded-[3rem] md:border-[16px]">
+  <div class="px-6 pt-10 md:px-16 md:pt-12">
+    {@render heading('How We Give Back')}
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    <div class="flex flex-col items-center px-6 py-12 md:px-10">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="mb-6 h-12 w-12"
+      >
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+      <h3 class="mb-4 text-center font-space-grotesk text-lg font-bold uppercase lg:text-xl">
+        Open source contributions
+      </h3>
+      <p class="text-center text-base md:text-lg">
+        We invest significant time and effort into open source projects that underpin the geospatial
+        ecosystem, including 
+        <a href="https://www.opendatacube.org/" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">Open Data Cube</a>
+        , <a href="https://stacspec.org/" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">STAC</a>
+        , and the broader cloud-native geospatial stack.
+        Giving back to the tools we rely on makes the whole community stronger.
+      </p>
+    </div>
+    <div class="flex flex-col items-center border-y border-white/20 px-6 py-12 md:border-x md:border-y-0 md:px-10">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="mb-6 h-12 w-12"
+      >
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
+      </svg>
+      <h3 class="mb-4 text-center font-space-grotesk text-lg font-bold uppercase lg:text-xl">
+        Mentoring
+      </h3>
+      <p class="text-center text-base md:text-lg">
+        We believe in lifting others up. We are proudly one of 
+        <a href="https://www.reseauconsulting.com/supporters" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">Réseau Consulting's Supporters</a>,
+        and we mentor emerging professionals and small teams finding their way in the geospatial and
+        Earth observation space.
+      </p>
+    </div>
+    <div class="flex flex-col items-center px-6 py-12 md:px-10">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="mb-6 h-12 w-12"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+        <path d="M2 12h20" />
+      </svg>
+      <h3 class="mb-4 text-center font-space-grotesk text-lg font-bold uppercase lg:text-xl">
+        Community building
+      </h3>
+      <p class="text-center text-base md:text-lg">
+        We help build the communities we belong to through not-for-profit governance, conference
+        organising (including chairing 
+        <a href="https://2025.foss4g.org/" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">FOSS4G 2025</a>)
+        , and investing in organisations and events through sponsorship. A
+        thriving community benefits everyone.
+      </p>
+    </div>
+  </div>
+  <div class="relative h-64 w-full md:h-96">
+    <enhanced:img
+      src={givingBack}
+      alt="Giving back to the community"
+      sizes="(min-width: 1280px) 1280px, 100vw"
+      class="h-full w-full object-cover"
+      style="object-position: center 60%;"
+    />
   </div>
 </section>
 
