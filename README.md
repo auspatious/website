@@ -1,42 +1,51 @@
-# sv
+# Auspatious' Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Copyright and License
 
-## Creating a project
+All code is made available under Apache 2.0 and any content is Copyright Auspatious, made available
+under [CC-BY]([https://](https://creativecommons.org/licenses/by/4.0/deed.en).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Dev Notes
+
+This is a [SvelteKit](https://svelte.dev/docs/kit) project using [Tailwind CSS](https://tailwindcss.com/)
+with [daisyUI](https://daisyui.com/), and deployed to [Cloudflare Workers](https://developers.cloudflare.com/workers/).
+
+### Getting Started
+
+Install dependencies with [pnpm](https://pnpm.io/):
 
 ```sh
-# create a new project
-npx sv create my-app
+pnpm install
 ```
 
-To recreate this project with the same configuration:
+Start a development server:
 
 ```sh
-# recreate this project
-pnpm dlx sv@0.12.8 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography" sveltekit-adapter="adapter:cloudflare+cfTarget:workers" --install pnpm website
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
+pnpm dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm dev -- --open
 ```
 
-## Building
+### Building and Previewing
 
-To create a production version of your app:
+Build for production:
 
 ```sh
-npm run build
+pnpm build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview the production build locally using Wrangler:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+pnpm preview
+```
+
+### Other Commands
+
+```sh
+pnpm check        # Run svelte-check for type checking
+pnpm lint         # Check formatting (Prettier) and linting (ESLint)
+pnpm format       # Auto-format with Prettier
+pnpm gen          # Generate Cloudflare Worker types with Wrangler
+```
