@@ -17,7 +17,7 @@
   import bathyTuvalu from '$lib/assets/images/Satellite Derived Bathymetry Tuvalu 2025.jpg?enhanced';
 </script>
 
-> As a close partner of Digital Earth Pacific, Auspatious contributes to the technical foundations that enable Pacific Island Countries and Territories to access, process, and apply satellite data for environmental monitoring and decision-making.
+> As a close partner of the Pacific Community's Digital Earth Pacific, Auspatious contributes to the technical foundations that enable Pacific Island Countries and Territories to access, process, and apply satellite data for environmental monitoring and decision-making.
 
 Since 2023, our ongoing engagement has spanned strategy, infrastructure, data products, and capacity-building largely centred around the collaborative development and delivery of the Digital Earth Pacific Technical Roadmap.
 
@@ -36,7 +36,7 @@ We have delivered key data products the program and its partners depend on, incl
   <figcaption class="mt-2 text-sm opacity-70">Satellite-derived bathymetry, Suva, 2025</figcaption>
 </figure>
 
-Alongside our technical contributions, we enjoy supporting the Digital Earth Pacific program through developing skills and mentoring the DEP team, and collaborating with DEP on broader international engagement. It is a privilege to work with a team doing genuinely important work for some of the world's most climate-exposed communities, and we remain committed to this partnership.
+Alongside our technical contributions, we enjoy supporting the Digital Earth Pacific program through developing skills and mentoring the Digital Earth Pacific team, and collaborating with Digital Earth Pacific on broader international engagement. It is a privilege to work with a team doing genuinely important work for some of the world's most climate-exposed communities, and we remain committed to this partnership.
 
 <a href="https://dep-public-prod.s3.us-west-2.amazonaws.com/documents/DE_Pacific_Technical_Roadmap_v1.pdf">
   Read the full The Digital Earth Pacific Technical Roadmap here

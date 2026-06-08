@@ -16,7 +16,7 @@
   import landPro from '$lib/assets/images/Land Productivity Fancy Pic 2024.jpg?enhanced';
 </script>
 
-> Auspatious has partnered with Conservation International on a Global Environment Facility (GEF)-funded initiative to build a high-resolution, open, and reproducible land cover dataset for Small Island Developing States (SIDS), supporting global commitments on land degradation neutrality and SDG 15.3.1 reporting.
+> Auspatious has partnered with Conservation International and the Pacific Community on a Global Environment Facility (GEF)-funded initiative to build a high-resolution, open, and reproducible land cover dataset for Small Island Developing States (SIDS), supporting global commitments on land degradation neutrality and SDG 15.3.1 reporting.
 
 To address this challenge, the project carefully evaluates where current datasets agree and disagree across diverse island geographies to inform a more fit-for-purpose classification approach.
 
