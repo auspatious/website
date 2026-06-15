@@ -14,6 +14,9 @@
 
 <script lang="ts">
   import landPro from '$lib/assets/images/Land Productivity Fancy Pic 2024.jpg?enhanced';
+  import gefLogo from '$lib/assets/logos/gef-logo.png?url';
+  import ciLogo from '$lib/assets/logos/ci-logo.png?url';
+  import trendsEarthLogo from '$lib/assets/logos/trends-earth-logo.png?url';
 </script>
 
 > Auspatious has partnered with Conservation International and the Pacific Community on a Global Environment Facility (GEF)-funded initiative to build a high-resolution, open, and reproducible land cover dataset for Small Island Developing States (SIDS), supporting global commitments on land degradation neutrality and SDG 15.3.1 reporting.
@@ -30,3 +33,15 @@ This project/work is critical because SIDS face a real monitoring gap. The defau
 </figure>
 
 For SIDS, which are uniquely underserved and highly vulnerable to land degradation and climate change, inaccurate or incomplete monitoring data has real consequences for policy, investment, and international reporting.
+
+<div class="not-prose my-12 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+  <a href="https://www.thegef.org/" target="_blank" rel="noopener noreferrer">
+    <img src={gefLogo} alt="Global Environment Facility" class="h-24 md:h-32 w-auto" />
+  </a>
+  <a href="https://www.conservation.org/" target="_blank" rel="noopener noreferrer">
+    <img src={ciLogo} alt="Conservation International" class="h-16 md:h-20 w-auto" />
+  </a>
+  <a href="https://docs.trends.earth/en/latest/" target="_blank" rel="noopener noreferrer">
+    <img src={trendsEarthLogo} alt="Trends.Earth" class="h-16 md:h-20 w-auto" />
+  </a>
+</div>
