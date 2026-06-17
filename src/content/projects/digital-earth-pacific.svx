@@ -39,5 +39,5 @@ We have delivered key data products the program and its partners depend on, incl
 Alongside our technical contributions, we enjoy supporting the Digital Earth Pacific program through developing skills and mentoring the Digital Earth Pacific team, and collaborating with Digital Earth Pacific on broader international engagement. It is a privilege to work with a team doing genuinely important work for some of the world's most climate-exposed communities, and we remain committed to this partnership.
 
 <a href="https://dep-public-prod.s3.us-west-2.amazonaws.com/documents/DE_Pacific_Technical_Roadmap_v1.pdf">
-  Read the full The Digital Earth Pacific Technical Roadmap here
+  Read the full Digital Earth Pacific Technical Roadmap here
 </a>

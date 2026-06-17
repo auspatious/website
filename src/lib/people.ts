@@ -1,5 +1,5 @@
 import type { Picture } from '@sveltejs/enhanced-img';
-import alex from '$lib/assets/images/alex-sq.jpg?enhanced';
+import alex from '$lib/assets/images/alex3.jpg?enhanced';
 import will from '$lib/assets/images/will.jpg?enhanced';
 
 export type Person = {
@@ -18,7 +18,7 @@ export const people: Person[] = [
     linkedin: 'https://linkedin.com/in/alex-leith',
     bio: [
       'Alex is an open geospatial technologist with deep expertise in software development, cloud infrastructure, and program governance, all focused on making Earth observation data more accessible, actionable, and aligned with sustainable development.',
-      'Outside of running Auspatious, he volunteers his purpose, principles, and time on the Spatio-Temporal Asset Catalog Project Steering Council, as a Non-Executive Board Director at OSGeo Oceania and oversees financial stewardship as Treasurer at Earth Observation Australia.',
+      'Outside of running Auspatious, he volunteers his purpose, principles, and time on the Spatio-Temporal Asset Catalog Project Steering Committee, as a Non-Executive Board Director at OSGeo Oceania and oversees financial stewardship as Treasurer at Earth Observation Australia.',
       'In his carved out personal time, you\'ll find him exploring wilderness trails with his children and in the quiet joy of discovering a well-crafted beer.'
     ]
   },
