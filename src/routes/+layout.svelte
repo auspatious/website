@@ -1,7 +1,6 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/state';
-  import { env } from '$env/dynamic/public';
   import favicon from '$lib/assets/logos/as-logo-symb-colour.svg';
   import { initializeAppState } from '$lib/state.svelte';
   import Header from '../components/Header.svelte';
@@ -18,7 +17,7 @@
   const siteName = 'Auspatious';
   const defaultTitle = 'Auspatious: a cloud native geospatial company';
   const defaultDescription = 'Spatial data intelligence';
-  const canonicalBaseUrl = $derived((env.PUBLIC_SITE_URL || page.url.origin).replace(/\/$/, ''));
+  const canonicalBaseUrl = 'https://auspatious.com';
   const canonicalUrl = $derived(`${canonicalBaseUrl}${page.url.pathname}`);
 </script>
 

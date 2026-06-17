@@ -1,7 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import { page } from '$app/state';
-  import { env } from '$env/dynamic/public';
   import type { Component } from 'svelte';
   import { projects, type ProjectMeta } from '$lib/projects';
   import BlurUpImage from '../../../components/BlurUpImage.svelte';
@@ -14,8 +13,8 @@
   const bySlug = Object.fromEntries(Object.values(modules).map((m) => [m.meta.slug, m]));
   const project = $derived(bySlug[page.params.slug!]);
 
+  const canonicalBaseUrl = 'https://auspatious.com';
   const ogTitle = $derived(`${project.meta.title} — Auspatious`);
-  const canonicalBaseUrl = $derived((env.PUBLIC_SITE_URL || page.url.origin).replace(/\/$/, ''));
   const ogUrl = $derived(`${canonicalBaseUrl}${page.url.pathname}`);
   const ogImage = $derived(
     project.meta.image.img.src.startsWith('http')
