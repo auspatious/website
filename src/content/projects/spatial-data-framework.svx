@@ -1,7 +1,7 @@
 <script module lang="ts">
   import type { ProjectMeta } from '$lib/projects';
-  import image from '$lib/assets/images/Clouds in Auckland, Sentinel-2 2025.jpg?enhanced';
-  import lqipData from '$lib/assets/images/Clouds in Auckland, Sentinel-2 2025.jpg?lqip';
+  import image from '$lib/assets/images/sdf-header.jpg?enhanced';
+  import lqipData from '$lib/assets/images/sdf-header.jpg?lqip';
 
   export const meta: ProjectMeta = {
     slug: 'spatial-data-framework',
