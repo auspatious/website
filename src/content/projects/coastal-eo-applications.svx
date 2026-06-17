@@ -26,7 +26,7 @@ We began our contribution by processing coastal and marine datasets for Vietnam 
   <figcaption class="mt-2 text-sm opacity-70">Open Data Cube</figcaption>
 </figure>
 
-We're also working closely with the national Geospatial Information Agenc in Indonesia, Badan Informasi Geospasial (BIG). In Bogor, we supported a Coastal Earth Observation Science workshop, where participants explored satellite-based coastal monitoring methods using Digital Earth products. A follow-on workshop in Sydney deepened the BIG team's skills in large-scale data processing using the cloud.
+We're also working closely with the national Geospatial Information Agency in Indonesia, Badan Informasi Geospasial (BIG). In Bogor, we supported a Coastal Earth Observation Science workshop, where participants explored satellite-based coastal monitoring methods using Digital Earth products. A follow-on workshop in Sydney deepened the BIG team's skills in large-scale data processing using the cloud.
 
 <figure class="not-prose my-8">
   <enhanced:img src={workshop2} alt="Indonesia Workshop" sizes="100vw" class="w-full" />
