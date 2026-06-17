@@ -13,7 +13,7 @@
 </script>
 
 <script lang="ts">
-  import landPro from '$lib/assets/images/Land Productivity Fancy Pic 2024.jpg?enhanced';
+  import geomadCompare from '$lib/assets/images/geomad-classification-compare.png?enhanced';
   import gefLogo from '$lib/assets/logos/gef-logo.png?url';
   import ciLogo from '$lib/assets/logos/ci-logo.png?url';
   import trendsEarthLogo from '$lib/assets/logos/trends-earth-logo.png?url';
@@ -27,9 +27,9 @@ We're delivering a purpose-built, 30-metre resolution annual land use/land cover
 
 This project/work is critical because SIDS face a real monitoring gap. The default global land cover dataset used for UNCCD reporting, ESA's Climate Change Initiative product, operates at 300 metre resolution, which is too coarse to capture the fine-grained land dynamics of small island landscapes. Higher-resolution alternatives exist but suffer from incomplete geographic and temporal coverage, inconsistent classification methodologies, and significant discrepancies that can produce very different degradation outcomes depending on which product a country selects.
 
-<figure class="not-prose my-8">
-  <enhanced:img src={landPro} alt="Land Productivity" sizes="100vw" class="w-full" />
-  <figcaption class="mt-2 text-sm opacity-70">Land Productivity</figcaption>
+<figure>
+  <enhanced:img src={geomadCompare} alt="Comparison of Landsat GeoMAD and land use/land cover classification" sizes="100vw" class="w-full" />
+  <figcaption class="mt-2 text-sm opacity-70">Comparison of Landsat GeoMAD and land use/land cover classification</figcaption>
 </figure>
 
 For SIDS, which are uniquely underserved and highly vulnerable to land degradation and climate change, inaccurate or incomplete monitoring data has real consequences for policy, investment, and international reporting.
