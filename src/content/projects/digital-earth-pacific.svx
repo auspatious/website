@@ -1,7 +1,7 @@
 <script module lang="ts">
   import type { ProjectMeta } from '$lib/projects';
-  import image from '$lib/assets/images/Digital_Earth_Pacific_Korobaba_2023.jpg?enhanced';
-  import lqipData from '$lib/assets/images/Digital_Earth_Pacific_Korobaba_2023.jpg?lqip';
+  import image from '$lib/assets/images/dep-header.jpg?enhanced';
+  import lqipData from '$lib/assets/images/dep-header.jpg?lqip';
 
   export const meta: ProjectMeta = {
     slug: 'digital-earth-pacific',
@@ -13,8 +13,8 @@
 </script>
 
 <script lang="ts">
-  import bathySuva from '$lib/assets/images/Satellite Derived Bathymetry Suva 2025.jpg?enhanced';
-  import bathyTuvalu from '$lib/assets/images/Satellite Derived Bathymetry Tuvalu 2025.jpg?enhanced';
+  import korobaba from '$lib/assets/images/korobaba-suva.jpg?enhanced';
+  import terriaMap from '$lib/assets/images/dep-terria-map.png?enhanced';
 </script>
 
 > As a close partner of the Pacific Community's Digital Earth Pacific, Auspatious contributes to the technical foundations that enable Pacific Island Countries and Territories to access, process, and apply satellite data for environmental monitoring and decision-making.
@@ -22,8 +22,8 @@
 Since 2023, our ongoing engagement has spanned strategy, infrastructure, data products, and capacity-building largely centred around the collaborative development and delivery of the Digital Earth Pacific Technical Roadmap.
 
 <figure>
-  <enhanced:img src={bathyTuvalu} alt="Satellite-derived bathymetry of Tuvalu, 2025" sizes="(min-width: 768px) 50vw, 100vw" class="w-full rounded-xl" />
-  <figcaption class="mt-2 text-sm opacity-70">Satellite-derived bathymetry, Tuvalu, 2025</figcaption>
+  <enhanced:img src={terriaMap} alt="Digital Earth Pacific's Sentinel-2 GeoMAD and Satellite-Derived Bathymetry data near Nouméa, New Caledonia" sizes="(min-width: 768px) 50vw, 100vw" class="w-full rounded-xl" />
+  <figcaption class="mt-2 text-sm opacity-70">Digital Earth Pacific's Sentinel-2 GeoMAD and Satellite-Derived Bathymetry data near Nouméa, New Caledonia</figcaption>
 </figure>
 
 
@@ -32,8 +32,8 @@ A key part of the Roadmap development was to chart the direction for cloud-nativ
 We have delivered key data products the program and its partners depend on, including the Digital Earth Pacific Satellite Derived Bathymetry dataset and Sentinel-2 Geometric Median and Median Absolute Deviations cloud-free mosaics.
 
 <figure>
-  <enhanced:img src={bathySuva} alt="Satellite-derived bathymetry of Suva, 2025" sizes="(min-width: 768px) 50vw, 100vw" class="w-full rounded-xl" />
-  <figcaption class="mt-2 text-sm opacity-70">Satellite-derived bathymetry, Suva, 2025</figcaption>
+  <enhanced:img src={korobaba} alt="View of coasts, reef and forest from Mount Korobaba near Suva" sizes="(min-width: 768px) 50vw, 100vw" class="w-full rounded-xl" />
+  <figcaption class="mt-2 text-sm opacity-70">View of coasts, reef and forest from Mount Korobaba near Suva</figcaption>
 </figure>
 
 Alongside our technical contributions, we enjoy supporting the Digital Earth Pacific program through developing skills and mentoring the Digital Earth Pacific team, and collaborating with Digital Earth Pacific on broader international engagement. It is a privilege to work with a team doing genuinely important work for some of the world's most climate-exposed communities, and we remain committed to this partnership.
