@@ -77,6 +77,7 @@
     <img
       src={logoVertWhite}
       alt="Auspatious"
+      style="width: 30%;"
       in:fly={{ y: -20, duration: 1000, delay: 200, easing: cubicOut }}
     />
     <p
