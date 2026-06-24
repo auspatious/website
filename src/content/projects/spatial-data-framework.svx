@@ -10,25 +10,33 @@
     image,
     lqip: lqipData.lqip
   };
+
+  import visualisation from '$lib/assets/images/Cloud Spatial Data Framework Screenshot 2026.jpg?enhanced';
+
+  import provenance from '$lib/assets/images/sdf-provenance.png?enhanced';
+
 </script>
 
-<script lang="ts">
-  import clouds from '$lib/assets/images/Cloud Spatial Data Framework Screenshot 2026.jpg?enhanced';
-</script>
-
-> University of New South Wales (UNSW)'s Centre for Sustainable Development Reform is partnering with Auspatious to develop a cloud-native spatial data platform that brings together environmental datasets, processing pipelines, and reporting tools into a single, transparent system for those working on coastal and ocean sustainability.
+> University of New South Wales (UNSW)‘s Centre for Sustainable Development Reform is partnering with Auspatious to develop a cloud-native spatial data platform that brings together environmental datasets, processing pipelines, and reporting tools into a single, transparent system for those working on coastal and ocean sustainability.
 
 Environmental reporting on indicators such as mangrove extent, seagrass coverage, and coastal carbon stocks typically involves complex, disconnected processes that are difficult to audit, reproduce, or communicate to non-technical audiences. Governments and financial institutions need confidence in where numbers and conclusions have come from. Trust comes from being able to trace the provenance of each reported figure back through the data and methods that produced it.
 
-We centred and built the platform's design on data provenance. Every indicator, whether it is hectares of mangroves or carbon sequestration potential, carries a traceable record of its originating data and processing steps. This chain of evidence can be exported as a certified, point-in-time report, giving confidence in the analysis.
+We focused the platform’s design on data provenance. Every indicator, whether it is hectares of mangroves or carbon sequestration potential, carries a traceable record of its originating data and processing steps. This chain of evidence can be exported as a certified, point-in-time report, giving confidence in the analysis.
+
+<figure class="not-prose my-8">
+  <enhanced:img src={provenance} alt="Cloud Spatial Data Framework" sizes="100vw" class="w-full" />
+  <figcaption class="mt-2 text-sm opacity-70">The Spatial Data Framework includes detailed processing provenance, including links to the source code used in processing each step on GitHub</figcaption>
+</figure>
 
 The platform ingests high-resolution geospatial datasets in cloud-native formats, processes them through automated pipelines, surfacing results via a web application and API. It is designed to serve a range of users, from senior decision-makers who need a quick regional summary to analysts who want to bring their own data and models into the system.
 
 <figure class="not-prose my-8">
-  <enhanced:img src={clouds} alt="Cloud Spatial Data Framework" sizes="100vw" class="w-full" />
-  <figcaption class="mt-2 text-sm opacity-70">Cloud Spatial Data Framework</figcaption>
+  <enhanced:img src={visualisation} alt="Spatial data framework visualisation" sizes="100vw" class="w-full" />
+  <figcaption class="mt-2 text-sm opacity-70">Visualisation of global mangrove watch data aggregated at exclusive economic zone level globally</figcaption>
 </figure>
 
 Built intentionally with open-source technologies and cloud-native patterns, the platform minimises vendor lock-in. This ensures that UNSW and its partners can operate and extend the system independently over time.
 
 We're also supporting knowledge transfer through structured workshops and documentation, so that the capability built during the project can be sustained and grown well beyond its delivery period.
+
+For more information, you can read about the SDF on the <a href="https://oceanaccounts.org/sdf/" target="_blank" rel="noopener noreferrer">Ocean Accounts website</a>.
