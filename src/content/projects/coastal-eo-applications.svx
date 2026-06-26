@@ -6,7 +6,7 @@
   export const meta: ProjectMeta = {
     slug: 'coastal-eo-applications',
     title: 'Coastal EO Applications',
-    tagline: 'Building capacity for coastal knowledge across Southeast Asia',
+    tagline: 'Building coastal monitoring capability across Southeast Asia',
     image,
     lqip: lqipData.lqip
   };

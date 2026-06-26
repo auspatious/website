@@ -26,7 +26,6 @@ Since 2023, our ongoing engagement has spanned strategy, infrastructure, data pr
   <figcaption class="mt-2 text-sm opacity-70">Digital Earth Pacific's Sentinel-2 GeoMAD and Satellite-Derived Bathymetry data near Nouméa, New Caledonia</figcaption>
 </figure>
 
-
 A key part of the Roadmap development was to chart the direction for cloud-native Earth observation infrastructure. Our expertise in building cloud-native systems was instrumental in the platform migration from Azure in Europe to AWS in the US. This move brought the platform closer to USGS and NASA data, cutting costs and improving performance for Pacific users.
 
 We have delivered key data products the program and its partners depend on, including the Digital Earth Pacific Satellite Derived Bathymetry dataset and Sentinel-2 Geometric Median and Median Absolute Deviations cloud-free mosaics.
