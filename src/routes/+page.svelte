@@ -108,8 +108,8 @@
       <ul class="ml-6 list-disc space-y-2 [&>li]:pl-1 md:ml-12">
         <li use:reveal>Build robust, open, and reproducible geospatial platforms</li>
         <li use:reveal>Lower barriers to accessing and analysing Earth observation data</li>
-        <li use:reveal>Apply open standards, open data, and open-source software to problems</li>
-        <li use:reveal>Share knowledge, grow capability, and strengthen the global EO community.</li>
+        <li use:reveal>Apply open standards, open data, and open source software to problems</li>
+        <li use:reveal>Share knowledge, grow capability, and strengthen the global EO community</li>
       </ul>
     </div>
   </div>
@@ -123,7 +123,7 @@
       <li use:reveal><strong>Cloud-native:</strong> built for secure, scalable, operational use</li>
       <li use:reveal><strong>Thoughtful and collaborative:</strong> we question, learn, and co-design</li>
       <li use:reveal><strong>Impact-oriented:</strong> technology in service of community and the environment</li>
-      <li use:reveal><strong>Anti-cynical:</strong> we believe that collaboration and trust is better for everyone</li>
+      <li use:reveal><strong>Anti-cynical:</strong> we choose trust, and we've found it brings out the best in people</li>
     </ul>
   </div>
 </section>
