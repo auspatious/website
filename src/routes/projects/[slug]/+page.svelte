@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import { resolve } from '$app/paths';
   import { page } from '$app/state';
   import type { Component } from 'svelte';
   import { projects, type ProjectMeta } from '$lib/projects';
@@ -60,10 +60,16 @@
     />
   </BlurUpImage>
   <div class="hero-overlay absolute inset-0 bg-black/70 mix-blend-multiply"></div>
-  <div class="hero-content relative z-10 mx-auto w-full max-w-3xl justify-start text-left text-white">
+  <div
+    class="hero-content relative z-10 mx-auto w-full max-w-3xl justify-start text-left text-white"
+  >
     <div>
       <h1 class="text-3xl sm:text-6xl font-bold">{project.meta.title}</h1>
-      <p class="mt-3 sm:mt-6 text-sm sm:text-xl font-bold tracking-[1px] sm:tracking-[4px] uppercase">{project.meta.tagline}</p>
+      <p
+        class="mt-3 sm:mt-6 text-sm sm:text-xl font-bold tracking-[1px] sm:tracking-[4px] uppercase"
+      >
+        {project.meta.tagline}
+      </p>
     </div>
   </div>
 </div>
@@ -75,11 +81,13 @@
   <project.default />
 </article>
 
-<nav class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-6 pb-16 text-sm text-auslink">
+<nav
+  class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-6 pb-16 text-sm text-auslink"
+>
   {#if prev}
     <div class="flex flex-1 flex-col">
       <span class="text-white opacity-60">← Previous</span>
-      <a href="{base}/projects/{prev.slug}" class="font-bold">{prev.title}</a>
+      <a href={resolve('/projects/[slug]', { slug: prev.slug })} class="font-bold">{prev.title}</a>
     </div>
   {:else}
     <span class="flex-1"></span>
@@ -95,7 +103,7 @@
   {#if next}
     <div class="flex flex-1 flex-col text-right">
       <span class="text-white opacity-60">Next →</span>
-      <a href="{base}/projects/{next.slug}" class="font-bold">{next.title}</a>
+      <a href={resolve('/projects/[slug]', { slug: next.slug })} class="font-bold">{next.title}</a>
     </div>
   {:else}
     <span class="flex-1"></span>

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import { resolve } from '$app/paths';
+  import type { Pathname } from '$app/types';
   import type { Snippet } from 'svelte';
   import type { HTMLAnchorAttributes } from 'svelte/elements';
 
@@ -7,9 +8,12 @@
     href,
     children,
     ...rest
-  }: HTMLAnchorAttributes & { children: Snippet } = $props();
+  }: Omit<HTMLAnchorAttributes, 'href'> & {
+    href: Pathname;
+    children: Snippet;
+  } = $props();
 </script>
 
-<a href="{base}{href}" {...rest}>
+<a href={resolve(href)} {...rest}>
   {@render children()}
 </a>

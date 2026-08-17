@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import { base, resolve } from '$app/paths';
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
   import { getAppState, defaultAppState, heroImageModules } from '$lib/state.svelte';
@@ -99,8 +99,8 @@
   <div class="ml-auto space-y-12 text-base md:w-5/6 md:text-xl">
     <div>
       <p class="mb-8 text-xl font-bold md:mb-16 md:text-3xl" use:reveal>
-        Auspatious designs and delivers cloud-native geospatial solutions that turn complex data into
-        useful, usable products.
+        Auspatious designs and delivers cloud-native geospatial solutions that turn complex data
+        into useful, usable products.
       </p>
       <p class="mb-8" use:reveal>
         We work with governments, research organisations, and mission-driven partners to:
@@ -121,14 +121,22 @@
     <ul class="space-y-6 [&>li]:border-l-2 [&>li]:border-ausblue [&>li]:py-1 [&>li]:pl-6">
       <li use:reveal><strong>Open by default:</strong> open source, open data, open science</li>
       <li use:reveal><strong>Cloud-native:</strong> built for secure, scalable, operational use</li>
-      <li use:reveal><strong>Thoughtful and collaborative:</strong> we question, learn, and co-design</li>
-      <li use:reveal><strong>Impact-oriented:</strong> technology in service of community and the environment</li>
-      <li use:reveal><strong>Anti-cynical:</strong> we choose trust, and we've found it brings out the best in people</li>
+      <li use:reveal>
+        <strong>Thoughtful and collaborative:</strong> we question, learn, and co-design
+      </li>
+      <li use:reveal>
+        <strong>Impact-oriented:</strong> technology in service of community and the environment
+      </li>
+      <li use:reveal>
+        <strong>Anti-cynical:</strong> we choose trust, and we've found it brings out the best in people
+      </li>
     </ul>
   </div>
 </section>
 
-<section class="mx-auto mt-12 grid w-full max-w-7xl md:mt-0 md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+<section
+  class="mx-auto mt-12 grid w-full max-w-7xl md:mt-0 md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#232323] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]"
+>
   <div class="flex flex-col px-6 pt-10 pb-20 md:px-16 md:pt-12">
     {@render heading('What We Do')}
     <div class="flex flex-1 items-center">
@@ -169,7 +177,9 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-10 mx-auto grid w-full max-w-7xl md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]">
+<section
+  class="-mt-[2rem] relative z-10 mx-auto grid w-full max-w-7xl md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-t-[2rem] border-x-[8px] border-t-[8px] border-ausblue bg-[#D9D9D9] text-black md:-mt-[3rem] md:grid-cols-2 md:rounded-t-[3rem] md:border-x-[16px] md:border-t-[16px]"
+>
   <div class="flex items-center bg-[#D9D9D9] px-6 py-20 md:px-16">
     <div>
       <svg
@@ -182,7 +192,9 @@
         stroke-linejoin="round"
         class="mx-auto mb-6 h-12 w-12"
       >
-        <path d="M2 19V5a2 2 0 0 1 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z" />
+        <path
+          d="M2 19V5a2 2 0 0 1 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"
+        />
         <circle cx="13" cy="14" r="2" />
         <path d="M13 12v-2" />
         <path d="M13 16v2a2 2 0 0 0 2 2h2" />
@@ -193,8 +205,8 @@
       </h3>
       <p class="text-center text-base md:text-xl">
         We help shape and deliver complex geospatial projects from idea to implementation. Working
-        closely with stakeholders and iterating early, we reduce risk, maintain momentum, and deliver
-        systems that create lasting value.
+        closely with stakeholders and iterating early, we reduce risk, maintain momentum, and
+        deliver systems that create lasting value.
       </p>
     </div>
   </div>
@@ -224,7 +236,9 @@
   </div>
 </section>
 
-<section class="-mt-[2rem] relative z-20 mx-auto grid w-full max-w-7xl md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]">
+<section
+  class="-mt-[2rem] relative z-20 mx-auto grid w-full max-w-7xl md:min-h-[50svh] grid-cols-1 overflow-hidden rounded-[2rem] border-[8px] border-ausblue bg-[#232323] md:-mt-[3rem] md:grid-cols-2 md:rounded-[3rem] md:border-[16px]"
+>
   <div class="relative hidden md:block">
     <enhanced:img
       src={indonesiaWorkshop}
@@ -265,12 +279,15 @@
 <section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Some of our Work')}
   <div class="ml-auto grid w-full grid-cols-1 gap-8 md:w-5/6 md:grid-cols-2">
-    {#each projects as project}
+    {#each projects as project (project.slug)}
       <a
-        href="{base}/projects/{project.slug}"
+        href={resolve('/projects/[slug]', { slug: project.slug })}
         class="group relative block aspect-video overflow-hidden rounded-md shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl md:rounded-xl"
       >
-        <BlurUpImage lqip={project.lqip} class="absolute inset-0 overflow-hidden rounded-md md:rounded-lg">
+        <BlurUpImage
+          lqip={project.lqip}
+          class="absolute inset-0 overflow-hidden rounded-md md:rounded-lg"
+        >
           <enhanced:img
             src={project.image}
             alt={project.title}
@@ -278,11 +295,15 @@
             class="h-full w-full object-cover"
           />
         </BlurUpImage>
-        <div class="absolute inset-0 overflow-hidden rounded-md bg-black/70 mix-blend-multiply md:rounded-lg"></div>
+        <div
+          class="absolute inset-0 overflow-hidden rounded-md bg-black/70 mix-blend-multiply md:rounded-lg"
+        ></div>
         <div class="absolute inset-0 z-10 flex flex-col justify-end p-4 text-white md:p-6">
           <h3 class="flex flex-grow text-2xl md:text-3xl">{project.title}</h3>
           <p class="text-sm md:text-base">{project.tagline}</p>
-          <span class="mt-2 text-xs font-bold tracking-widest text-auslink underline-offset-4 group-hover:underline md:mt-4 md:text-sm">
+          <span
+            class="mt-2 text-xs font-bold tracking-widest text-auslink underline-offset-4 group-hover:underline md:mt-4 md:text-sm"
+          >
             View project →
           </span>
         </div>
@@ -291,7 +312,9 @@
   </div>
 </section>
 
-<section class="mx-auto w-full max-w-7xl overflow-hidden rounded-[2rem] border-[8px] border-white bg-[#232323] md:rounded-[3rem] md:border-[16px]">
+<section
+  class="mx-auto w-full max-w-7xl overflow-hidden rounded-[2rem] border-[8px] border-white bg-[#232323] md:rounded-[3rem] md:border-[16px]"
+>
   <div class="px-6 pt-10 md:px-16 md:pt-12">
     {@render heading('How We Give Back')}
   </div>
@@ -315,14 +338,27 @@
       </h3>
       <p class="text-center text-base md:text-lg">
         We invest significant time and effort into open source projects that underpin the geospatial
-        ecosystem, including 
-        <a href="https://www.opendatacube.org/" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">Open Data Cube</a>
-        , <a href="https://stacspec.org/" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">STAC</a>
-        , and the broader cloud-native geospatial stack.
-        Giving back to the tools we rely on makes the whole community stronger.
+        ecosystem, including
+        <a
+          href="https://www.opendatacube.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-auslink underline underline-offset-4 hover:text-white">Open Data Cube</a
+        >
+        ,
+        <a
+          href="https://stacspec.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-auslink underline underline-offset-4 hover:text-white">STAC</a
+        >
+        , and the broader cloud-native geospatial stack. Giving back to the tools we rely on makes the
+        whole community stronger.
       </p>
     </div>
-    <div class="flex flex-col items-center border-y border-white/20 px-6 py-12 md:border-x md:border-y-0 md:px-10">
+    <div
+      class="flex flex-col items-center border-y border-white/20 px-6 py-12 md:border-x md:border-y-0 md:px-10"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -333,16 +369,23 @@
         stroke-linejoin="round"
         class="mb-6 h-12 w-12"
       >
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
+        />
       </svg>
       <h3 class="mb-4 text-center font-space-grotesk text-lg font-bold uppercase lg:text-xl">
         Mentoring
       </h3>
       <p class="text-center text-base md:text-lg">
-        We believe in lifting others up. We are proudly one of 
-        <a href="https://www.reseauconsulting.com/supporters" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">Réseau Consulting's Supporters</a>,
-        and we mentor emerging professionals and small teams finding their way in the geospatial and
-        Earth observation space.
+        We believe in lifting others up. We are proudly one of
+        <a
+          href="https://www.reseauconsulting.com/supporters"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-auslink underline underline-offset-4 hover:text-white"
+          >Réseau Consulting's Supporters</a
+        >, and we mentor emerging professionals and small teams finding their way in the geospatial
+        and Earth observation space.
       </p>
     </div>
     <div class="flex flex-col items-center px-6 py-12 md:px-10">
@@ -365,10 +408,14 @@
       </h3>
       <p class="text-center text-base md:text-lg">
         We help build the communities we belong to through not-for-profit governance, conference
-        organising (including chairing 
-        <a href="https://2025.foss4g.org/" target="_blank" rel="noopener noreferrer" class="text-auslink underline underline-offset-4 hover:text-white">FOSS4G 2025</a>)
-        , and investing in organisations and events through sponsorship. A
-        thriving community benefits everyone.
+        organising (including chairing
+        <a
+          href="https://2025.foss4g.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-auslink underline underline-offset-4 hover:text-white">FOSS4G 2025</a
+        >) , and investing in organisations and events through sponsorship. A thriving community
+        benefits everyone.
       </p>
     </div>
   </div>
@@ -386,9 +433,10 @@
 <section class="mx-auto max-w-7xl px-6 my-8 md:my-16">
   {@render heading('Who We Are')}
   <div class="flex flex-wrap justify-center gap-8 md:justify-end">
-    {#each people as person, i}
+    {#each people as person, i (person.name)}
       <div
-        class="flex w-64 cursor-pointer flex-col overflow-hidden rounded-xl bg-black shadow-lg transition-shadow duration-300 md:flex-row {expandedPerson === i
+        class="flex w-64 cursor-pointer flex-col overflow-hidden rounded-xl bg-black shadow-lg transition-shadow duration-300 md:flex-row {expandedPerson ===
+        i
           ? '!w-full md:min-h-64 md:flex-1'
           : 'md:h-64 hover:scale-105'} hover:shadow-2xl"
         onclick={() => togglePerson(i)}
@@ -397,7 +445,9 @@
         tabindex="0"
         use:closeOnOutside
       >
-        <div class="flex h-64 w-full shrink-0 flex-col items-center justify-between p-6 text-center text-white md:h-auto md:min-h-64 md:w-64 md:items-start md:text-left">
+        <div
+          class="flex h-64 w-full shrink-0 flex-col items-center justify-between p-6 text-center text-white md:h-auto md:min-h-64 md:w-64 md:items-start md:text-left"
+        >
           <div class="h-24 w-24 overflow-hidden rounded-full">
             <enhanced:img src={person.image} alt={person.name} class="h-full w-full object-cover" />
           </div>
@@ -407,7 +457,7 @@
             <a
               href={person.linkedin}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="external noopener noreferrer"
               class="btn btn-sm btn-outline mt-3"
               onclick={(e: MouseEvent) => e.stopPropagation()}
             >
@@ -415,13 +465,11 @@
             </a>
           </div>
         </div>
-        <div
-          class="overflow-hidden {expandedPerson === i
-            ? 'flex-1'
-            : 'hidden'}"
-        >
-          <div class="border-t border-white/10 px-5 py-6 text-base text-white md:min-w-64 md:border-t-0 md:border-l">
-            {#each person.bio as paragraph}
+        <div class="overflow-hidden {expandedPerson === i ? 'flex-1' : 'hidden'}">
+          <div
+            class="border-t border-white/10 px-5 py-6 text-base text-white md:min-w-64 md:border-t-0 md:border-l"
+          >
+            {#each person.bio as paragraph (paragraph)}
               <p class="mb-3">{paragraph}</p>
             {/each}
           </div>

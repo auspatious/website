@@ -35,6 +35,14 @@
       <!-- Desktop links -->
       <div class="hidden gap-4 p-1 lg:flex">
         <Link href="/" class="link link-hover">Home</Link>
+        <a
+          href="https://cogniscient.auspatious.com"
+          class="link link-hover"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Map
+        </a>
         <button class="link link-hover cursor-pointer" onclick={() => (contactOpen = true)}>
           Contact Us
         </button>
@@ -45,17 +53,41 @@
         aria-label="Menu"
         onclick={() => (menuOpen = !menuOpen)}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <line x1="4" y1="6" x2="20" y2="6" stroke-width="2" stroke-linecap="round"
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <line
+            x1="4"
+            y1="6"
+            x2="20"
+            y2="6"
+            stroke-width="2"
+            stroke-linecap="round"
             class="transition-all duration-300"
             style:transform-origin="12px 6px"
             style:transform={menuOpen ? 'translateY(6px) rotate(45deg)' : ''}
           />
-          <line x1="4" y1="12" x2="20" y2="12" stroke-width="2" stroke-linecap="round"
+          <line
+            x1="4"
+            y1="12"
+            x2="20"
+            y2="12"
+            stroke-width="2"
+            stroke-linecap="round"
             class="transition-opacity duration-300"
             style:opacity={menuOpen ? '0' : '1'}
           />
-          <line x1="4" y1="18" x2="20" y2="18" stroke-width="2" stroke-linecap="round"
+          <line
+            x1="4"
+            y1="18"
+            x2="20"
+            y2="18"
+            stroke-width="2"
+            stroke-linecap="round"
             class="transition-all duration-300"
             style:transform-origin="12px 18px"
             style:transform={menuOpen ? 'translateY(-6px) rotate(-45deg)' : ''}
@@ -71,6 +103,15 @@
     >
       <div class="flex w-full justify-center gap-6 text-sm">
         <Link href="/" class="link link-hover" onclick={() => (menuOpen = false)}>Home</Link>
+        <a
+          href="https://cogniscient.auspatious.com"
+          class="link link-hover"
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick={() => (menuOpen = false)}
+        >
+          Map
+        </a>
         <button
           class="link link-hover cursor-pointer"
           onclick={() => {
