@@ -1,13 +1,22 @@
 import { error, json } from '@sveltejs/kit';
 import { projects } from '$lib/projects';
-import { bboxToPolygon, CC_BY_LINK, SITE_URL, STAC_VERSION } from '$lib/stac';
+import { bboxToPolygon, CC_BY_LINK, selfLink, STAC_VERSION, type StacLink } from '$lib/stac';
 
 export const prerender = true;
 export const entries = () => projects.map((p) => ({ slug: p.slug }));
 
-export const GET = ({ params }: { params: { slug: string } }) => {
+export const GET = ({ params, url }: { params: { slug: string }; url: URL }) => {
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) error(404);
+
+  const links: StacLink[] = [
+    selfLink(url, 'application/geo+json'),
+    { rel: 'root', href: '../catalog.json', type: 'application/json' },
+    { rel: 'parent', href: 'collection.json', type: 'application/json' },
+    { rel: 'collection', href: 'collection.json', type: 'application/json' },
+    { rel: 'alternate', href: `../../projects/${project.slug}`, type: 'text/html' },
+    CC_BY_LINK
+  ];
 
   return json({
     stac_version: STAC_VERSION,
@@ -29,17 +38,6 @@ export const GET = ({ params }: { params: { slug: string } }) => {
         roles: ['thumbnail']
       }
     },
-    links: [
-      {
-        rel: 'self',
-        href: `${SITE_URL}/catalog/projects/${project.slug}.json`,
-        type: 'application/geo+json'
-      },
-      { rel: 'root', href: '../catalog.json', type: 'application/json' },
-      { rel: 'parent', href: 'collection.json', type: 'application/json' },
-      { rel: 'collection', href: 'collection.json', type: 'application/json' },
-      { rel: 'alternate', href: `../../projects/${project.slug}`, type: 'text/html' },
-      CC_BY_LINK
-    ]
+    links
   });
 };

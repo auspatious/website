@@ -1,11 +1,27 @@
 import { json } from '@sveltejs/kit';
 import { projects } from '$lib/projects';
-import { CC_BY_LINK, CC_BY_SPDX, SITE_URL, STAC_VERSION, unionBbox } from '$lib/stac';
+import {
+  CC_BY_LINK,
+  CC_BY_SPDX,
+  itemLink,
+  selfLink,
+  STAC_VERSION,
+  type StacLink,
+  unionBbox
+} from '$lib/stac';
 
 export const prerender = true;
 
-export const GET = () =>
-  json({
+export const GET = ({ url }: { url: URL }) => {
+  const links: StacLink[] = [
+    selfLink(url),
+    { rel: 'root', href: '../catalog.json', type: 'application/json' },
+    { rel: 'parent', href: '../catalog.json', type: 'application/json' },
+    CC_BY_LINK,
+    ...projects.map((p) => itemLink(p.slug, p.title))
+  ];
+
+  return json({
     stac_version: STAC_VERSION,
     type: 'Collection',
     id: 'projects',
@@ -25,20 +41,6 @@ export const GET = () =>
         roles: ['thumbnail']
       }
     },
-    links: [
-      {
-        rel: 'self',
-        href: `${SITE_URL}/catalog/projects/collection.json`,
-        type: 'application/json'
-      },
-      { rel: 'root', href: '../catalog.json', type: 'application/json' },
-      { rel: 'parent', href: '../catalog.json', type: 'application/json' },
-      CC_BY_LINK,
-      ...projects.map((p) => ({
-        rel: 'item',
-        href: `${p.slug}.json`,
-        type: 'application/geo+json',
-        title: p.title
-      }))
-    ]
+    links
   });
+};

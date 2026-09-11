@@ -25,6 +25,16 @@ export const CC_BY_LINK: StacLink = {
   title: 'Creative Commons Attribution 4.0 International'
 };
 
+/** Derives the (spec-required absolute) self link from the request path, so it can't drift from the file's actual location. */
+export function selfLink(url: URL, type = 'application/json'): StacLink {
+  return { rel: 'self', href: `${SITE_URL}${url.pathname}`, type };
+}
+
+/** A `rel: item` link to a sibling `<slug>.json` in the same collection directory. */
+export function itemLink(slug: string, title: string): StacLink {
+  return { rel: 'item', href: `${slug}.json`, type: 'application/geo+json', title };
+}
+
 /** Turns a [west, south, east, north] bbox into a rectangular GeoJSON Polygon. */
 export function bboxToPolygon([w, s, e, n]: [number, number, number, number]) {
   return {

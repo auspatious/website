@@ -1,14 +1,36 @@
 import { json } from '@sveltejs/kit';
 import { people } from '$lib/people';
-import { CC_BY_LINK, CC_BY_SPDX, SITE_URL, STAC_VERSION } from '$lib/stac';
+import {
+  CC_BY_LINK,
+  CC_BY_SPDX,
+  itemLink,
+  selfLink,
+  STAC_VERSION,
+  type StacLink,
+  unionBbox
+} from '$lib/stac';
 
 export const prerender = true;
 
-const lons = people.map((p) => p.location.longitude);
-const lats = people.map((p) => p.location.latitude);
+const bbox = unionBbox(
+  people.map((p) => [
+    p.location.longitude,
+    p.location.latitude,
+    p.location.longitude,
+    p.location.latitude
+  ])
+);
 
-export const GET = () =>
-  json({
+export const GET = ({ url }: { url: URL }) => {
+  const links: StacLink[] = [
+    selfLink(url),
+    { rel: 'root', href: '../catalog.json', type: 'application/json' },
+    { rel: 'parent', href: '../catalog.json', type: 'application/json' },
+    CC_BY_LINK,
+    ...people.map((p) => itemLink(p.slug, p.name))
+  ];
+
+  return json({
     stac_version: STAC_VERSION,
     type: 'Collection',
     id: 'people',
@@ -17,9 +39,7 @@ export const GET = () =>
       'The people behind Auspatious: who we are, what we do, and where in the world we work from.',
     license: CC_BY_SPDX,
     extent: {
-      spatial: {
-        bbox: [[Math.min(...lons), Math.min(...lats), Math.max(...lons), Math.max(...lats)]]
-      },
+      spatial: { bbox: [bbox] },
       temporal: { interval: [['1970-01-01T00:00:00Z', null]] }
     },
     assets: {
@@ -30,16 +50,6 @@ export const GET = () =>
         roles: ['thumbnail']
       }
     },
-    links: [
-      { rel: 'self', href: `${SITE_URL}/catalog/people/collection.json`, type: 'application/json' },
-      { rel: 'root', href: '../catalog.json', type: 'application/json' },
-      { rel: 'parent', href: '../catalog.json', type: 'application/json' },
-      CC_BY_LINK,
-      ...people.map((p) => ({
-        rel: 'item',
-        href: `${p.slug}.json`,
-        type: 'application/geo+json',
-        title: p.name
-      }))
-    ]
+    links
   });
+};
