@@ -43,6 +43,14 @@
         >
           Map
         </a>
+        <a
+          href="https://browser.moregeo.it/external/auspatious.com/stac/catalog.json"
+          class="link link-hover"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          STAC
+        </a>
         <button class="link link-hover cursor-pointer" onclick={() => (contactOpen = true)}>
           Contact Us
         </button>
@@ -111,6 +119,15 @@
           onclick={() => (menuOpen = false)}
         >
           Map
+        </a>
+        <a
+          href="https://browser.moregeo.it/external/auspatious.com/stac/catalog.json"
+          class="link link-hover"
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick={() => (menuOpen = false)}
+        >
+          STAC
         </a>
         <button
           class="link link-hover cursor-pointer"
