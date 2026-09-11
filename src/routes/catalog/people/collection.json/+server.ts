@@ -1,25 +1,12 @@
 import { json } from '@sveltejs/kit';
 import { people } from '$lib/people';
-import {
-  CC_BY_LINK,
-  CC_BY_SPDX,
-  itemLink,
-  selfLink,
-  STAC_VERSION,
-  type StacLink,
-  unionBbox
-} from '$lib/stac';
+import { CC_BY_LINK, CC_BY_SPDX, itemLink, selfLink, STAC_VERSION, type StacLink } from '$lib/stac';
 
 export const prerender = true;
 
-const bbox = unionBbox(
-  people.map((p) => [
-    p.location.longitude,
-    p.location.latitude,
-    p.location.longitude,
-    p.location.latitude
-  ])
-);
+// Australia, sized to the thumbnail's 1200x630 (~1.9:1) aspect ratio so STAC
+// clients that overlay the thumbnail on a map don't stretch/squish it to fit.
+const bbox: [number, number, number, number] = [101, -44, 166, -10];
 
 export const GET = ({ url }: { url: URL }) => {
   const links: StacLink[] = [

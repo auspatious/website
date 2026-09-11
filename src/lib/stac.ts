@@ -50,19 +50,3 @@ export function bboxToPolygon([w, s, e, n]: [number, number, number, number]) {
     ]
   };
 }
-
-/** Union bbox covering a set of [west, south, east, north] boxes (no antimeridian handling). */
-export function unionBbox(
-  boxes: [number, number, number, number][]
-): [number, number, number, number] {
-  const [first, ...rest] = boxes;
-  return rest.reduce(
-    (acc, [w, s, e, n]) => [
-      Math.min(acc[0], w),
-      Math.min(acc[1], s),
-      Math.max(acc[2], e),
-      Math.max(acc[3], n)
-    ],
-    first
-  );
-}
