@@ -8,7 +8,8 @@
     title: 'Land Degradation Neutrality',
     tagline: 'Delivering High-Resolution Land Cover Intelligence for Small Island Developing States',
     image,
-    lqip: lqipData.lqip
+    lqip: lqipData.lqip,
+    bbox: [-180, -35, 180, 35]
   };
 </script>
 

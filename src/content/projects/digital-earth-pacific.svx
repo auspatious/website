@@ -8,7 +8,8 @@
     title: 'Digital Earth Pacific',
     tagline: 'Supporting open Earth observation infrastructure across the Pacific',
     image,
-    lqip: lqipData.lqip
+    lqip: lqipData.lqip,
+    bbox: [163, -23, 179, -15]
   };
 </script>
 

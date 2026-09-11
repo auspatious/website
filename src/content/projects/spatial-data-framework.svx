@@ -8,7 +8,8 @@
     title: 'Spatial Data Framework',
     tagline: 'Building a Transparent Spatial Data Platform for Coastal and Ocean Reporting',
     image,
-    lqip: lqipData.lqip
+    lqip: lqipData.lqip,
+    bbox: [-180, -90, 180, 90]
   };
 
   import visualisation from '$lib/assets/images/Cloud Spatial Data Framework Screenshot 2026.jpg?enhanced';
