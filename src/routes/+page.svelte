@@ -467,6 +467,7 @@
               <a
                 href="{base}{person.cv}"
                 download
+                rel="external"
                 class="btn btn-xs btn-outline"
                 onclick={(e: MouseEvent) => e.stopPropagation()}
               >

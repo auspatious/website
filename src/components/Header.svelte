@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from '$app/state';
   import logo from '$lib/assets/logos/as-logo-symb-colour.svg';
   import logoText from '$lib/assets/logos/as-logo-white-text.svg';
   import Link from './Link.svelte';
@@ -7,6 +8,12 @@
   let menuOpen = $state(false);
   let scrolled = $state(false);
   let contactOpen = $state(false);
+
+  // Points at wherever this page is actually being served from (dev, a
+  // preview build, or production), not a hardcoded production URL.
+  const stacBrowserHref = $derived(
+    `https://browser.moregeo.it/external/${page.url.origin}/stac/catalog.json`
+  );
 
   $effect(() => {
     const onScroll = () => {
@@ -44,10 +51,10 @@
           Map
         </a>
         <a
-          href="https://browser.moregeo.it/external/auspatious.com/stac/catalog.json"
+          href={stacBrowserHref}
           class="link link-hover"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="external noopener noreferrer"
         >
           STAC
         </a>
@@ -121,10 +128,10 @@
           Map
         </a>
         <a
-          href="https://browser.moregeo.it/external/auspatious.com/stac/catalog.json"
+          href={stacBrowserHref}
           class="link link-hover"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="external noopener noreferrer"
           onclick={() => (menuOpen = false)}
         >
           STAC
