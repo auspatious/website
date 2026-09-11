@@ -11,9 +11,9 @@
   },
   "assets": {
     "thumbnail": {
-      "href": "thumbnail.svg",
-      "type": "image/svg+xml",
-      "title": "Places (placeholder)",
+      "href": "thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Places",
       "roles": ["thumbnail"]
     }
   },

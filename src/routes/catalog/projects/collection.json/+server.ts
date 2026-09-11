@@ -19,9 +19,9 @@ export const GET = () =>
     },
     assets: {
       thumbnail: {
-        href: 'thumbnail.svg',
-        type: 'image/svg+xml',
-        title: 'Projects (placeholder)',
+        href: 'thumbnail.jpg',
+        type: 'image/jpeg',
+        title: 'Projects',
         roles: ['thumbnail']
       }
     },
