@@ -64,7 +64,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "https://auspatious.com/catalog/places/cogniscient-2026-09-10-rgb-red-green-blue-5972px-britannia-place.stac-item.json",
+      "href": "https://auspatious.com/stac/places/cogniscient-2026-09-10-rgb-red-green-blue-5972px-britannia-place.stac-item.json",
       "type": "application/geo+json"
     },
     { "rel": "root", "href": "../catalog.json", "type": "application/json" },

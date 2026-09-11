@@ -14,7 +14,7 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "gen": "wrangler types",
-    "validate:stac": "vite build && stac-node-validator .svelte-kit/output/prerendered/pages/catalog static/catalog/places"
+    "validate:stac": "vite build && stac-node-validator .svelte-kit/output/prerendered/pages/stac static/stac/places"
   },
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
