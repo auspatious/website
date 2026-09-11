@@ -78,11 +78,13 @@
     {
       "rel": "about",
       "href": "https://cogniscient.auspatious.com/",
+      "type": "text/html",
       "title": "Generated with Cogniscient"
     },
     {
       "rel": "alternate",
       "href": "https://cogniscient.auspatious.com/?bbox=146.99809_-43.04686_147.73093_-42.70691&datetime=2026-09-10&cloud_cover_max=100&width=5972&format=jpg#9.46/-42.8848/147.373",
+      "type": "text/html",
       "title": "Reproduce this export in Cogniscient"
     },
     {

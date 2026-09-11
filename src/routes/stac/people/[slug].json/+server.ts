@@ -14,6 +14,7 @@ export const GET = ({ params, url }: { params: { slug: string }; url: URL }) => 
     { rel: 'root', href: '../catalog.json', type: 'application/json' },
     { rel: 'parent', href: 'collection.json', type: 'application/json' },
     { rel: 'collection', href: 'collection.json', type: 'application/json' },
+    { rel: 'about', href: person.linkedin, type: 'text/html', title: 'LinkedIn' },
     CC_BY_LINK
   ];
 

@@ -11,12 +11,10 @@
 >
   <p class="glow font-space-grotesk text-8xl font-bold sm:text-9xl">404</p>
   <h1 class="mt-6 font-space-grotesk text-xl font-bold tracking-widest uppercase sm:text-2xl">
-    Lost in orbit
+    Game over
   </h1>
-  <p class="mt-3 max-w-md text-base opacity-70 sm:text-lg">
-    This page doesn't exist, or has drifted off somewhere we can't see it.
-  </p>
-  <Link href="/" class="btn btn-outline mt-8">Back to home</Link>
+  <p class="mt-3 max-w-md text-base opacity-70 sm:text-lg">You were eaten by a grue</p>
+  <Link href="/" class="btn btn-outline mt-8">Take me home</Link>
 </section>
 
 <style>
