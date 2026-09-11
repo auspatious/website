@@ -4,9 +4,10 @@ import { CC_BY_LINK, CC_BY_SPDX, itemLink, selfLink, STAC_VERSION, type StacLink
 
 export const prerender = true;
 
-// The whole world — a 2:1 box, the closest a full-width global extent can get
-// to the thumbnail's 1200x630 (~1.9:1) aspect ratio without cropping longitude.
-const bbox: [number, number, number, number] = [-180, -90, 180, 90];
+// Worldwide, trimmed slightly at the antimeridian so the box matches the
+// thumbnail's 1200x630 (~1.9:1) aspect ratio exactly, rather than the 2:1 a
+// full -180/180 box gives (which reads slightly too wide/short against it).
+const bbox: [number, number, number, number] = [-171, -90, 171, 90];
 
 export const GET = ({ url }: { url: URL }) => {
   const links: StacLink[] = [
