@@ -37,6 +37,12 @@ export const GET = ({ params, url }: { params: { slug: string }; url: URL }) => 
         type: 'image/jpeg',
         title: `${person.name} headshot`,
         roles: ['thumbnail']
+      },
+      cv: {
+        href: person.cv,
+        type: 'application/pdf',
+        title: `${person.name} CV`,
+        roles: ['metadata']
       }
     },
     links

@@ -8,6 +8,8 @@ export type Person = {
   title: string;
   image: Picture;
   linkedin: string;
+  /** Path under static/, e.g. /cv/alex-leith.pdf. */
+  cv: string;
   bio: string[];
   /** Home state, as a [west, south, east, north] bbox for the STAC catalog. */
   location: { name: string; bbox: [number, number, number, number] };
@@ -20,6 +22,7 @@ export const people: Person[] = [
     title: 'Founder',
     image: alex,
     linkedin: 'https://linkedin.com/in/alex-leith',
+    cv: '/cv/alex-leith.pdf',
     location: { name: 'Tasmania', bbox: [143.8, -43.7, 148.5, -39.6] },
     bio: [
       'Alex is an open geospatial technologist with deep expertise in software development, cloud infrastructure, and program governance, all focused on making Earth observation data more accessible, actionable, and aligned with sustainable development.',
@@ -33,6 +36,7 @@ export const people: Person[] = [
     title: 'Senior Software Engineer',
     image: will,
     linkedin: 'https://linkedin.com/in/william-jones-spatial/',
+    cv: '/cv/will-jones.pdf',
     location: { name: 'Victoria', bbox: [140.96, -39.2, 150.0, -33.98] },
     bio: [
       'Will is a Senior Software Engineer who is deeply passionate about geospatial tech. With over eight years of experience delivering spatial solutions globally, he specialises in building cloud-native workflows, automating spatial data pipelines, and developing full-stack applications across open-source stacks, with extensive expertise in Python, JavaScript and SQL.',

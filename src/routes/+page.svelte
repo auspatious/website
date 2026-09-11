@@ -454,15 +454,25 @@
           <div>
             <h3 class="text-2xl font-bold">{person.name}</h3>
             <p class="text-sm opacity-70">{person.title}</p>
-            <a
-              href={person.linkedin}
-              target="_blank"
-              rel="external noopener noreferrer"
-              class="btn btn-sm btn-outline mt-3"
-              onclick={(e: MouseEvent) => e.stopPropagation()}
-            >
-              View LinkedIn
-            </a>
+            <div class="mt-3 flex flex-wrap justify-center gap-2 md:justify-start">
+              <a
+                href={person.linkedin}
+                target="_blank"
+                rel="external noopener noreferrer"
+                class="btn btn-xs btn-outline"
+                onclick={(e: MouseEvent) => e.stopPropagation()}
+              >
+                LinkedIn
+              </a>
+              <a
+                href="{base}{person.cv}"
+                download
+                class="btn btn-xs btn-outline"
+                onclick={(e: MouseEvent) => e.stopPropagation()}
+              >
+                Download CV
+              </a>
+            </div>
           </div>
         </div>
         <div class="overflow-hidden {expandedPerson === i ? 'flex-1' : 'hidden'}">
