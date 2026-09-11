@@ -1,6 +1,14 @@
 export const STAC_VERSION = '1.1.0';
+
+/**
+ * Canonical origin, used ONLY for `self` links (the one link the STAC spec requires to be
+ * an absolute URI, even in an otherwise self-contained/relative-linked catalog — see
+ * https://github.com/radiantearth/stac-spec/blob/master/best-practices.md#self-contained-catalogs).
+ * Every other link (root/parent/collection/item/child, and links to other parts of the site)
+ * is relative, so the catalog resolves correctly wherever it's actually served from
+ * (production, a Cloudflare preview URL, or localhost).
+ */
 export const SITE_URL = 'https://auspatious.com';
-export const CATALOG_HREF = `${SITE_URL}/catalog/catalog.json`;
 
 export type StacLink = {
   rel: string;
@@ -16,11 +24,6 @@ export const CC_BY_LINK: StacLink = {
   href: 'https://creativecommons.org/licenses/by/4.0/',
   title: 'Creative Commons Attribution 4.0 International'
 };
-
-/** Resolves an enhanced-img asset path to an absolute URL for use as a STAC asset href. */
-export function assetHref(src: string): string {
-  return src.startsWith('http') ? src : `${SITE_URL}${src}`;
-}
 
 /** Turns a [west, south, east, north] bbox into a rectangular GeoJSON Polygon. */
 export function bboxToPolygon([w, s, e, n]: [number, number, number, number]) {

@@ -1,6 +1,6 @@
 import { error, json } from '@sveltejs/kit';
 import { people } from '$lib/people';
-import { assetHref, CC_BY_LINK, SITE_URL, STAC_VERSION } from '$lib/stac';
+import { CC_BY_LINK, SITE_URL, STAC_VERSION } from '$lib/stac';
 
 export const prerender = true;
 export const entries = () => people.map((p) => ({ slug: p.slug }));
@@ -32,7 +32,7 @@ export const GET = ({ params }: { params: { slug: string } }) => {
     },
     assets: {
       photo: {
-        href: assetHref(person.image.img.src),
+        href: person.image.img.src,
         type: 'image/jpeg',
         title: `${person.name} headshot`,
         roles: ['thumbnail']
@@ -44,17 +44,9 @@ export const GET = ({ params }: { params: { slug: string } }) => {
         href: `${SITE_URL}/catalog/people/${person.slug}.json`,
         type: 'application/geo+json'
       },
-      { rel: 'root', href: `${SITE_URL}/catalog/catalog.json`, type: 'application/json' },
-      {
-        rel: 'parent',
-        href: `${SITE_URL}/catalog/people/collection.json`,
-        type: 'application/json'
-      },
-      {
-        rel: 'collection',
-        href: `${SITE_URL}/catalog/people/collection.json`,
-        type: 'application/json'
-      },
+      { rel: 'root', href: '../catalog.json', type: 'application/json' },
+      { rel: 'parent', href: 'collection.json', type: 'application/json' },
+      { rel: 'collection', href: 'collection.json', type: 'application/json' },
       CC_BY_LINK
     ]
   });

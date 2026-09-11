@@ -19,7 +19,7 @@ export const GET = () =>
     },
     assets: {
       thumbnail: {
-        href: `${SITE_URL}/catalog/projects/thumbnail.svg`,
+        href: 'thumbnail.svg',
         type: 'image/svg+xml',
         title: 'Projects (placeholder)',
         roles: ['thumbnail']
@@ -31,12 +31,12 @@ export const GET = () =>
         href: `${SITE_URL}/catalog/projects/collection.json`,
         type: 'application/json'
       },
-      { rel: 'root', href: `${SITE_URL}/catalog/catalog.json`, type: 'application/json' },
-      { rel: 'parent', href: `${SITE_URL}/catalog/catalog.json`, type: 'application/json' },
+      { rel: 'root', href: '../catalog.json', type: 'application/json' },
+      { rel: 'parent', href: '../catalog.json', type: 'application/json' },
       CC_BY_LINK,
       ...projects.map((p) => ({
         rel: 'item',
-        href: `${SITE_URL}/catalog/projects/${p.slug}.json`,
+        href: `${p.slug}.json`,
         type: 'application/geo+json',
         title: p.title
       }))

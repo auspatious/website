@@ -11,7 +11,7 @@
   },
   "assets": {
     "thumbnail": {
-      "href": "https://auspatious.com/catalog/places/thumbnail.svg",
+      "href": "thumbnail.svg",
       "type": "image/svg+xml",
       "title": "Places (placeholder)",
       "roles": ["thumbnail"]
@@ -19,8 +19,8 @@
   },
   "links": [
     { "rel": "self", "href": "https://auspatious.com/catalog/places/collection.json", "type": "application/json" },
-    { "rel": "root", "href": "https://auspatious.com/catalog/catalog.json", "type": "application/json" },
-    { "rel": "parent", "href": "https://auspatious.com/catalog/catalog.json", "type": "application/json" },
+    { "rel": "root", "href": "../catalog.json", "type": "application/json" },
+    { "rel": "parent", "href": "../catalog.json", "type": "application/json" },
     {
       "rel": "license",
       "href": "https://creativecommons.org/licenses/by/4.0/",
@@ -28,7 +28,7 @@
     },
     {
       "rel": "item",
-      "href": "https://auspatious.com/catalog/places/cogniscient-2026-09-10-rgb-red-green-blue-5972px-britannia-place.stac-item.json",
+      "href": "cogniscient-2026-09-10-rgb-red-green-blue-5972px-britannia-place.stac-item.json",
       "type": "application/geo+json",
       "title": "Britannia"
     }
