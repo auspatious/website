@@ -1,6 +1,6 @@
 import type { Picture } from '@sveltejs/enhanced-img';
 import alex from '$lib/assets/images/alex3.jpg?enhanced';
-import will from '$lib/assets/images/will.jpg?enhanced';
+import will from '$lib/assets/images/will-grinning.jpeg?enhanced';
 
 export type Person = {
   slug: string;
