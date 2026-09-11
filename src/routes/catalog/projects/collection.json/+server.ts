@@ -10,11 +10,20 @@ export const GET = () =>
     type: 'Collection',
     id: 'projects',
     title: 'Projects',
-    description: 'Projects delivered by Auspatious.',
+    description:
+      'Projects delivered by Auspatious: cloud-native geospatial platforms, data products, and capability-building work for governments, research organisations, and mission-driven partners around the world.',
     license: CC_BY_SPDX,
     extent: {
       spatial: { bbox: [unionBbox(projects.map((p) => p.bbox))] },
       temporal: { interval: [['2023-07-01T00:00:00Z', null]] }
+    },
+    assets: {
+      thumbnail: {
+        href: `${SITE_URL}/catalog/projects/thumbnail.svg`,
+        type: 'image/svg+xml',
+        title: 'Projects (placeholder)',
+        roles: ['thumbnail']
+      }
     },
     links: [
       {

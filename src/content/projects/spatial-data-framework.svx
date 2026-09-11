@@ -7,6 +7,8 @@
     slug: 'spatial-data-framework',
     title: 'Spatial Data Framework',
     tagline: 'Building a Transparent Spatial Data Platform for Coastal and Ocean Reporting',
+    description:
+      "University of New South Wales (UNSW)'s Centre for Sustainable Development Reform is partnering with Auspatious to develop a cloud-native spatial data platform that brings together environmental datasets, processing pipelines, and reporting tools into a single, transparent system for those working on coastal and ocean sustainability.",
     image,
     lqip: lqipData.lqip,
     bbox: [-180, -90, 180, 90]

@@ -7,6 +7,8 @@
     slug: 'digital-earth-pacific',
     title: 'Digital Earth Pacific',
     tagline: 'Supporting open Earth observation infrastructure across the Pacific',
+    description:
+      "As a close partner of the Pacific Community's Digital Earth Pacific, Auspatious contributes to the technical foundations that enable Pacific Island Countries and Territories to access, process, and apply satellite data for environmental monitoring and decision-making.",
     image,
     lqip: lqipData.lqip,
     bbox: [163, -23, 179, -15]

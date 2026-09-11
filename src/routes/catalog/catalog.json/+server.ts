@@ -10,7 +10,7 @@ export const GET = () =>
     id: 'auspatious',
     title: 'Auspatious',
     description:
-      'A static STAC catalog for Auspatious: the people, projects, and places behind our work.',
+      'Auspatious designs and delivers cloud-native geospatial solutions that turn complex data into useful, usable products. This static STAC catalog is a bit of fun on the side: it lists the people behind Auspatious, the projects we deliver, and places that matter to us, all described using the same open, cloud-native geospatial standard we build with every day.',
     links: [
       { rel: 'self', href: `${SITE_URL}/catalog/catalog.json`, type: 'application/json' },
       { rel: 'root', href: `${SITE_URL}/catalog/catalog.json`, type: 'application/json' },

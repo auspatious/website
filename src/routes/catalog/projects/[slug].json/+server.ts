@@ -19,7 +19,7 @@ export const GET = ({ params }: { params: { slug: string } }) => {
     properties: {
       datetime: '2023-07-01T00:00:00Z',
       title: project.title,
-      description: project.tagline
+      description: project.description
     },
     assets: {
       thumbnail: {
