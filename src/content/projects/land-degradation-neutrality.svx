@@ -7,8 +7,11 @@
     slug: 'land-degradation-neutrality',
     title: 'Land Degradation Neutrality',
     tagline: 'Delivering High-Resolution Land Cover Intelligence for Small Island Developing States',
+    description:
+      'Auspatious has partnered with Conservation International and the Pacific Community on a Global Environment Facility (GEF)-funded initiative to build a high-resolution, open, and reproducible land cover dataset for Small Island Developing States (SIDS), supporting global commitments on land degradation neutrality and SDG 15.3.1 reporting.',
     image,
-    lqip: lqipData.lqip
+    lqip: lqipData.lqip,
+    bbox: [-180, -35, 180, 35]
   };
 </script>
 

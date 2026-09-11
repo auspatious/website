@@ -7,8 +7,11 @@
     slug: 'coastal-eo-applications',
     title: 'Coastal EO Applications',
     tagline: 'Building coastal monitoring capability across Southeast Asia',
+    description:
+      'Through the Marine Resources Initiative, Auspatious is working alongside Geoscience Australia to deliver Earth observation expertise, practical training, and cloud-based data infrastructure to partner agencies across Southeast Asia. Our role includes capacity development, data processing, hands-on training, and ongoing technical support, building real, lasting capabilities with teams across the region.',
     image,
-    lqip: lqipData.lqip
+    lqip: lqipData.lqip,
+    bbox: [95, -10, 130, 20]
   };
 </script>
 

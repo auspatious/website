@@ -1,0 +1,111 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/processing/v1.1.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "cogniscient-2026-09-10-2026-09-11T04:50:31.035Z",
+  "bbox": [
+    146.99808570260802,
+    -43.04686201977934,
+    147.7309315906237,
+    -42.70690756382238
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          146.99808570260802,
+          -43.04686201977934
+        ],
+        [
+          147.7309315906237,
+          -43.04686201977934
+        ],
+        [
+          147.7309315906237,
+          -42.70690756382238
+        ],
+        [
+          146.99808570260802,
+          -42.70690756382238
+        ],
+        [
+          146.99808570260802,
+          -43.04686201977934
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-09-10T00:00:00Z",
+    "created": "2026-09-11T04:50:31.035Z",
+    "processing:lineage": "Composited from 2 Sentinel-2 scene(s): S2B_55GDN_20260910_0_L2A, S2B_55GEN_20260910_0_L2A",
+    "cogniscient:collection": "sentinel-2-l2a",
+    "cogniscient:visualisation": {
+      "selected_bands": {
+        "mode": "rgb",
+        "bands": {
+          "r": "red",
+          "g": "green",
+          "b": "blue"
+        }
+      },
+      "stretch": {
+        "vmin": 0,
+        "vmax": 3000,
+        "gamma": 1
+      },
+      "format": "jpg"
+    }
+  },
+  "collection": "places",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://auspatious.com/stac/places/cogniscient-2026-09-10-rgb-red-green-blue-5972px-britannia-place.stac-item.json",
+      "type": "application/geo+json"
+    },
+    { "rel": "root", "href": "../catalog.json", "type": "application/json" },
+    { "rel": "parent", "href": "collection.json", "type": "application/json" },
+    { "rel": "collection", "href": "collection.json", "type": "application/json" },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "rel": "about",
+      "href": "https://cogniscient.auspatious.com/",
+      "title": "Generated with Cogniscient"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://cogniscient.auspatious.com/?bbox=146.99809_-43.04686_147.73093_-42.70691&datetime=2026-09-10&cloud_cover_max=100&width=5972&format=jpg#9.46/-42.8848/147.373",
+      "title": "Reproduce this export in Cogniscient"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_55GDN_20260910_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_55GDN_20260910_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_55GEN_20260910_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_55GEN_20260910_0_L2A"
+    }
+  ],
+  "assets": {
+    "visual": {
+      "href": "cogniscient-2026-09-10-rgb-red-green-blue-5972px-britannia-place.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "visual"
+      ],
+      "title": "Exported image"
+    }
+  }
+}

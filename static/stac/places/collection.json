@@ -1,0 +1,36 @@
+{
+  "stac_version": "1.1.0",
+  "type": "Collection",
+  "id": "places",
+  "title": "Places",
+  "description": "Places that matter to Auspatious, captured in satellite imagery: the landscapes behind our work and the places we call home.",
+  "license": "CC-BY-4.0",
+  "extent": {
+    "spatial": { "bbox": [[146.99808570260802, -43.04686201977934, 147.7309315906237, -42.70690756382238]] },
+    "temporal": { "interval": [["2026-09-10T00:00:00Z", null]] }
+  },
+  "assets": {
+    "thumbnail": {
+      "href": "thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Places",
+      "roles": ["thumbnail"]
+    }
+  },
+  "links": [
+    { "rel": "self", "href": "https://auspatious.com/stac/places/collection.json", "type": "application/json" },
+    { "rel": "root", "href": "../catalog.json", "type": "application/json" },
+    { "rel": "parent", "href": "../catalog.json", "type": "application/json" },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "rel": "item",
+      "href": "cogniscient-2026-09-10-rgb-red-green-blue-5972px-britannia-place.stac-item.json",
+      "type": "application/geo+json",
+      "title": "Britannia"
+    }
+  ]
+}
