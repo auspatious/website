@@ -1,6 +1,6 @@
 import type { Picture } from '@sveltejs/enhanced-img';
 import alex from '$lib/assets/images/alex3.jpg?enhanced';
-import will from '$lib/assets/images/will-grinning.jpg?enhanced';
+import will from '$lib/assets/images/will.jpg?enhanced';
 import caitlin from '$lib/assets/images/caitlin.jpg?enhanced';
 
 export type Person = {
