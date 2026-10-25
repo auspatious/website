@@ -1,0 +1,123 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/processing/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/render/v2.1.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "cogniscient-2026-10-23-2026-10-25T17:06:35.212Z",
+  "bbox": [
+    123.58598615879146,
+    -16.984623066125863,
+    124.02913511657727,
+    -16.648503315117196
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          123.58598615879146,
+          -16.984623066125863
+        ],
+        [
+          124.02913511657727,
+          -16.984623066125863
+        ],
+        [
+          124.02913511657727,
+          -16.648503315117196
+        ],
+        [
+          123.58598615879146,
+          -16.648503315117196
+        ],
+        [
+          123.58598615879146,
+          -16.984623066125863
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-23T00:00:00Z",
+    "created": "2026-10-25T17:06:35.212Z",
+    "processing:lineage": "Composited from 2 Sentinel-2 scene(s): S2A_51KWB_20261023_0_L2A, S2A_51KXB_20261023_0_L2A",
+    "cogniscient:collection": "sentinel-2-l2a",
+    "renders": {
+      "cogniscient": {
+        "assets": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "rescale": [
+          [
+            0,
+            3000
+          ],
+          [
+            0,
+            3000
+          ],
+          [
+            0,
+            3000
+          ]
+        ]
+      }
+    },
+    "cogniscient:visualisation": {
+      "selected_bands": {
+        "mode": "rgb",
+        "bands": {
+          "r": "red",
+          "g": "green",
+          "b": "blue"
+        }
+      },
+      "stretch": {
+        "vmin": 0,
+        "vmax": 3000,
+        "gamma": 1
+      },
+      "format": "jpg"
+    }
+  },
+  "links": [
+    {
+      "rel": "about",
+      "href": "https://cogniscient.auspatious.com/",
+      "type": "text/html",
+      "title": "Generated with Cogniscient"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://cogniscient.auspatious.com/?bbox=123.58599_-16.98462_124.02914_-16.6485&datetime=2026-10-23&width=4717&format=jpg#10.02/-16.8383/123.8539",
+      "type": "text/html",
+      "title": "Reproduce this export in Cogniscient"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_51KWB_20261023_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_51KWB_20261023_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_51KXB_20261023_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_51KXB_20261023_0_L2A"
+    }
+  ],
+  "assets": {
+    "visual": {
+      "href": "cogniscient-2026-10-23-rgb-red-green-blue-4717px-western-australia.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "visual"
+      ],
+      "title": "Exported image"
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/processing/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/render/v2.1.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "cogniscient-2026-10-23-2026-10-25T16:55:15.951Z",
+  "bbox": [
+    136.6496571404801,
+    -28.294323016041155,
+    137.29829504864205,
+    -27.78103828767142
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          136.6496571404801,
+          -28.294323016041155
+        ],
+        [
+          137.29829504864205,
+          -28.294323016041155
+        ],
+        [
+          137.29829504864205,
+          -27.78103828767142
+        ],
+        [
+          136.6496571404801,
+          -27.78103828767142
+        ],
+        [
+          136.6496571404801,
+          -28.294323016041155
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-23T00:00:00Z",
+    "created": "2026-10-25T16:55:15.951Z",
+    "processing:lineage": "Composited from 4 Sentinel-2 scene(s): S2C_53JPJ_20261023_0_L2A, S2C_53JQJ_20261023_0_L2A, S2C_53JPK_20261023_0_L2A, S2C_53JQK_20261023_0_L2A",
+    "cogniscient:collection": "sentinel-2-l2a",
+    "renders": {
+      "cogniscient": {
+        "assets": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "rescale": [
+          [
+            0,
+            3000
+          ],
+          [
+            0,
+            3000
+          ],
+          [
+            0,
+            3000
+          ]
+        ]
+      }
+    },
+    "cogniscient:visualisation": {
+      "selected_bands": {
+        "mode": "rgb",
+        "bands": {
+          "r": "red",
+          "g": "green",
+          "b": "blue"
+        }
+      },
+      "stretch": {
+        "vmin": 0,
+        "vmax": 3000,
+        "gamma": 1
+      },
+      "format": "jpg"
+    }
+  },
+  "links": [
+    {
+      "rel": "about",
+      "href": "https://cogniscient.auspatious.com/",
+      "type": "text/html",
+      "title": "Generated with Cogniscient"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://cogniscient.auspatious.com/?bbox=136.64966_-28.29432_137.2983_-27.78104&datetime=2026-10-23&width=4318&format=jpg#9.87/-28.0499/137.0178",
+      "type": "text/html",
+      "title": "Reproduce this export in Cogniscient"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2C_53JPJ_20261023_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2C_53JPJ_20261023_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2C_53JQJ_20261023_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2C_53JQJ_20261023_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2C_53JPK_20261023_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2C_53JPK_20261023_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2C_53JQK_20261023_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2C_53JQK_20261023_0_L2A"
+    }
+  ],
+  "assets": {
+    "visual": {
+      "href": "cogniscient-2026-10-23-rgb-red-green-blue-4318px-south-australia.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "visual"
+      ],
+      "title": "Exported image"
+    }
+  }
+}
